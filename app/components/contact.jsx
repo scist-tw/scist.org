@@ -4,9 +4,9 @@ import {
   Facebook,
   Instagram,
   Mail,
-  MessageCircle,
   BookOpen,
 } from "lucide-react";
+import { SiDiscord } from "react-icons/si";
 
 export default function ContactSection() {
   const contactLinks = [
@@ -23,7 +23,7 @@ export default function ContactSection() {
       ariaLabel: "Visit SCIST on Instagram",
     },
     {
-      icon: MessageCircle,
+      icon: SiDiscord,
       label: "Discord",
       href: "https://discord.gg/scist",
       ariaLabel: "Join SCIST Discord",
@@ -83,8 +83,7 @@ export default function ContactSection() {
       <footer className="border-t border-primary/10 mt-12 py-6 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-foreground/60 text-sm">
-            © {new Date().getFullYear()} Students' Community of Information in
-            Southern Taiwan (SCIST). All rights reserved.
+            Copyright © {new Date().getFullYear()} SCIST. All rights reserved.
           </p>
         </div>
       </footer>

@@ -21,7 +21,7 @@ export default function Hero() {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
           南臺灣學生資訊社群
         </h1>
-        <p className="text-lg md:text-xl text-white max-w-2xl mx-auto">
+        <p className="text-lg font-bold md:text-xl text-white max-w-2xl mx-auto">
           Students' Community of Information in Southern Taiwan
         </p>
       </div>

@@ -7,9 +7,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
+    { label: "寒訓網站", href: "https://scist.camp", target: "_blank" },
     { label: "關於我們", href: "#about" },
-    { label: "活動內容", href: "#activities" },
-    { label: "合作社團", href: "#organizations" },
+    { label: "課程內容", href: "#activities" },
+    { label: "參與學校", href: "#organizations" },
     { label: "合作夥伴", href: "#partners" },
     { label: "聯絡資訊", href: "#contact" },
   ];
@@ -26,7 +27,7 @@ export default function Navbar() {
             <img
               src="https://scist.org/static/images/index.png"
               alt="SCIST Logo"
-              className="h-10 w-auto"
+              className="h-6 w-auto"
             />
           </a>
 
@@ -36,6 +37,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
+                target={item.target ? item.target : "_self"}
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 {item.label}
@@ -44,7 +46,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 cursor-pointer">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

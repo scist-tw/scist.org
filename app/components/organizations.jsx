@@ -77,7 +77,7 @@ export default function OrganizationsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
-            合作社團
+            參與學校
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
         </div>
@@ -94,7 +94,7 @@ export default function OrganizationsSection() {
                     key={index}
                     className="bg-primary/5 border border-primary/20 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary/40 p-4 flex gap-4 items-center"
                   >
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <Image
                         src="https://placehold.co/60x60?text=Logo"
                         alt={`${club.name} logo`}
@@ -104,7 +104,7 @@ export default function OrganizationsSection() {
                       />
                     </div>
 
-                    <div className="flex-grow min-w-0">
+                    <div className="grow min-w-0">
                       <h4 className="font-bold text-foreground text-sm mb-1 truncate">
                         {club.name}
                       </h4>

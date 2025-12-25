@@ -5,7 +5,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SCIST - 南臺灣學生資訊社群",
+  title: "SCIST | 南臺灣學生資訊社群",
   description: "Students' Community of Information in Southern Taiwan",
   generator: "v0.app",
   icons: {
