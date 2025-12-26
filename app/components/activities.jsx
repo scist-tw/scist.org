@@ -10,7 +10,7 @@ export default function ActivitiesSection() {
 
   useEffect(() => {
     let active = true;
-    fetch("/data/activities/activities.json")
+    fetch("/data/activities/data.json")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load activities.json");
         return res.json();

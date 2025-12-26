@@ -12,7 +12,7 @@ export default function OrganizationsSection() {
 
   useEffect(() => {
     let active = true;
-    fetch("/data/organizations.json")
+    fetch("/data/organizations/data.json")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load organizations.json");
         return res.json();
@@ -57,21 +57,21 @@ export default function OrganizationsSection() {
                     className="bg-primary/5 border border-primary/20 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary/40 p-4 flex gap-4 items-center"
                   >
                     <div className="shrink-0">
-                      <Image
-                        src="https://placehold.co/60x60?text=Logo"
-                        alt={`${club.name} logo`}
-                        width={60}
-                        height={60}
+                      <img
+                        src={"https://placehold.co/70x70"}
+                        alt={`${club.school} logo`}
+                        width={70}
+                        height={70}
                         className="rounded-full"
                       />
                     </div>
 
                     <div className="grow min-w-0">
                       <h4 className="font-bold text-foreground text-sm mb-1 truncate">
-                        {club.name}
+                        {club.school}
                       </h4>
                       <p className="text-xs text-muted-foreground mb-2 truncate">
-                        {club.society}
+                        {club.name}
                       </p>
 
                       <Link

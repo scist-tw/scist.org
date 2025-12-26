@@ -1,0 +1,34 @@
+[
+  {
+    "name": "嘉義",
+    "clubs": [
+      { "school": "嘉義高中", "name": "資訊研究社", "instagram": "cysh_irc" },
+      { "school": "嘉義女中", "name": "程式研究社", "instagram": "cygsh_irc_11" },
+      { "school": "嘉華高中", "name": "資訊社", "instagram": "frc_8584" },
+      { "school": "永慶高中", "name": "資訊研究社", "instagram": "ycsh_cs_club" }
+    ]
+  },
+  {
+    "name": "臺南",
+    "clubs": [
+      { "school": "臺南一中", "name": "資訊社", "instagram": "tfcis_at_tnfsh" },
+      { "school": "臺南女中", "name": "資訊研究社", "instagram": "tngs_tgirc" },
+      { "school": "興國高中", "name": "資訊應用社", "instagram": "" },
+      { "school": "臺南二中", "name": "資訊研究社", "instagram": "tnssh.ciss_115" },
+      { "school": "南大附中", "name": "資訊研究社", "instagram": "nfirc_2nd" },
+      { "school": "黎明中學", "name": "程式設計研究社", "instagram": "lmshlmcps7th" },
+      { "school": "成大南工", "name": "資訊社", "instagram": "" }
+    ]
+  },
+  {
+    "name": "高屏",
+    "clubs": [
+      { "school": "高雄中學", "name": "程式設計社", "instagram": "kspgc_115th" },
+      { "school": "高雄女中", "name": "電腦資訊暨網路科技研究社", "instagram": "kghs_i2trc2" },
+      { "school": "鳳山高中", "name": "電腦資訊社", "instagram": "fssh.cs.club" },
+      { "school": "新莊高中", "name": "電腦研究社", "instagram": "crhc_115th" },
+      { "school": "鳳新高中", "name": "電腦研究社", "instagram": "fhcrc_115th" },
+      { "school": "屏東高中", "name": "資訊習社", "instagram": "pths_circ_115" }
+    ]
+  }
+]
