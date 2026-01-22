@@ -5,6 +5,7 @@ import ActivitiesSection from "@/components/activities";
 import OrganizationsSection from "@/components/organizations";
 import PartnersSection from "@/components/sponsors";
 import ContactSection from "@/components/contact";
+import ScrollTop from "@/components/scrollTop";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <OrganizationsSection />
       <PartnersSection />
       <ContactSection />
+      <ScrollTop />
     </main>
   );
 }
