@@ -7,41 +7,44 @@ import {
   BookOpen,
 } from "lucide-react";
 import { SiDiscord } from "react-icons/si";
+import { useEffect, useState } from "react";
 
 export default function ContactSection() {
-  const contactLinks = [
-    {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://facebook.com/scist",
-      ariaLabel: "Visit SCIST on Facebook",
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      href: "https://instagram.com/scist",
-      ariaLabel: "Visit SCIST on Instagram",
-    },
-    {
-      icon: SiDiscord,
-      label: "Discord",
-      href: "https://discord.gg/scist",
-      ariaLabel: "Join SCIST Discord",
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      href: "mailto:contact@scist.org",
-      ariaLabel: "Email SCIST",
-    },
-    {
-      icon: BookOpen,
-      label: "HackMD",
-      href: "https://hackmd.io/scist",
-      ariaLabel: "Visit SCIST HackMD",
-    },
-  ];
+  const ICONS = { Facebook, Instagram, Mail, BookOpen, SiDiscord };
 
+  const [contactLinks, setContactLinks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    let active = true;
+    fetch("/data/contact/data.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load contact data");
+        return res.json();
+      })
+      .then((data) => {
+        if (active) {
+          const normalized = Array.isArray(data)
+            ? data.map((item) => ({
+                ...item,
+                icon: ICONS[item.icon] || Mail,
+              }))
+            : [];
+          setContactLinks(normalized);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (active) {
+          setError(err.message);
+          setLoading(false);
+        }
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,15 +75,9 @@ export default function ContactSection() {
             );
           })}
         </div>
-
-        <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
-          <p className="text-foreground/80 mb-4">
-            歡迎加入 SCIST，與我們一起推動南臺灣資訊社群的發展！
-          </p>
-        </div>
       </div>
 
-      <footer className="border-t border-primary/10 mt-12 py-6 bg-background">
+      <footer className="border-t border-primary/10 mt-20 py-6 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-foreground/60 text-sm">
             Copyright © {new Date().getFullYear()} SCIST. All rights reserved.

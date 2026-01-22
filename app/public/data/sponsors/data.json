@@ -2,35 +2,35 @@
     {
       "title": "協辦單位",
       "items": [
-        {"name": "國立臺南第一高級中學", "image": ""},
-        {"name": "國立成功大學計算機與網路中心", "image": ""},
-        {"name": "成大資安社 | B33F 50UP", "image": ""}
+        {"name": "國立臺南第一高級中學", "image": "tnfsh.png"},
+        {"name": "國立成功大學計算機與網路中心", "image": "ncku.png"},
+        {"name": "成大資安社 | B33F 50UP", "image": "beefsoup.png"}
       ]
     },
     {
       "title": "鑽石級贊助單位",
       "items": [
-        {"name": "DEVCORE 戴夫寇爾", "image": ""},
-        {"name": "YTP 少年圖靈計畫", "image": ""}
+        {"name": "DEVCORE 戴夫寇爾", "image": "devcore.png", "website": "https://devco.re"},
+        {"name": "YTP 少年圖靈計畫", "image": "ytp.png", "website": "https://www.tw-ytp.org/"}
       ]
     },
     {
       "title": "白金級贊助單位",
       "items": [
-        {"name": "HIT 台灣駭客協會", "image": ""}
+        {"name": "HIT 台灣駭客協會", "image": "hit.png", "website": "https://hacker.org.tw/"}
       ]
     },
     {
       "title": "黃金級贊助單位",
       "items": [
-        {"name": "財團法人可成教育基金會", "image": ""}
+        {"name": "財團法人可成教育基金會", "image": "csr.png", "website": "https://www.catcher-group.com/tw/index.aspx"}
       ]
     },
     {
       "title": "特別感謝",
       "items": [
-        {"name": "HackMD", "image": ""},
-        {"name": "AIS3 Club", "image": ""}
+        {"name": "HackMD", "image": "hackmd.png", "website": "https://hackmd.io/zh/home"},
+        {"name": "AIS3 Club", "image": "AIS3_CLUB_logo.png", "website": "https://ais3.org/"}
       ]
     }
   ]

@@ -57,8 +57,8 @@ export default function OrganizationsSection() {
                     className="bg-primary/5 border border-primary/20 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary/40 p-4 flex gap-4 items-center"
                   >
                     <div className="shrink-0">
-                      <img
-                        src={"https://placehold.co/70x70"}
+                      <Image
+                        src={`/data/organizations/${club.image}`}
                         alt={`${club.school} logo`}
                         width={70}
                         height={70}
@@ -70,19 +70,19 @@ export default function OrganizationsSection() {
                       <h4 className="font-bold text-foreground text-sm mb-1 truncate">
                         {club.school}
                       </h4>
-                      <p className="text-xs text-muted-foreground mb-2 truncate">
+                      <p className="text-xs text-muted-foreground mb-1 truncate">
                         {club.name}
                       </p>
 
-                      <Link
+                      {club.instagram && (<Link
                         href={`https://instagram.com/${club.instagram}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors text-xs font-medium"
                       >
                         <Instagram size={14} />
-                        <span>@{club.instagram}</span>
-                      </Link>
+                        <span>{club.instagram}</span>
+                      </Link>)}
                     </div>
                   </div>
                 ))}

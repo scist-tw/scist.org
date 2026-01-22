@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function PartnersSection() {
   const [tiers, setTiers] = useState([]);
@@ -9,7 +10,7 @@ export default function PartnersSection() {
 
   useEffect(() => {
     let active = true;
-    fetch("/public/data/sponsors/data.json")
+    fetch("/data/sponsors/data.json")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load sponsors data");
         return res.json();
@@ -50,37 +51,44 @@ export default function PartnersSection() {
             : Array.isArray(tier?.sponsors)
               ? tier.sponsors
               : Object.values(tier?.items || tier?.sponsors || {});
-          return (
+            return (
             <div key={tIdx} className="mb-12">
               <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-                {tier.title ?? tier.name ?? ""}
+              {tier.title ?? tier.name ?? ""}
               </h3>
 
               <div className="flex flex-wrap justify-center gap-5">
-                {items.map((item, iIdx) => {
-                  const name = typeof item === "string" ? item : item?.name ?? "";
-                  const image = typeof item === "object" ? item?.image : undefined;
-                  return (
-                    <div
-                      key={iIdx}
-                      className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all w-full max-w-[300px]"
-                    >
-                      {image && (
-                        <img
-                          src={image}
-                          alt={name}
-                          className="w-full h-40 object-cover rounded-md mb-4 bg-gray-100"
-                        />
-                      )}
-                      <p className="text-sm font-medium text-foreground text-center">
-                        {name}
-                      </p>
-                    </div>
-                  );
-                })}
+              {items.map((item, iIdx) => {
+                const name = typeof item === "string" ? item : item?.name ?? "";
+                const image = typeof item === "object" ? item?.image : undefined;
+                const website = typeof item === "object" ? item?.website : undefined;
+
+                return (
+                <div
+                  key={iIdx}
+                  className={`bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all w-full max-w-[300px]${website ? " cursor-pointer" : ""}`}
+                  onClick={() => {
+                  if (website) window.open(website, "_blank", "noopener,noreferrer");
+                  }}
+                >
+                  {image && (
+                  <Image
+                    src={`/data/sponsors/${image}`}
+                    alt={name}
+                    width={70}
+                    height={70}
+                    className="w-full h-40 object-cover rounded-md mb-4 bg-white"
+                  />
+                  )}
+                  <p className="text-sm font-medium text-gray-500 text-center">
+                  {name}
+                  </p>
+                </div>
+                );
+              })}
               </div>
             </div>
-          );
+            );
         })}
       </div>
     </section>
