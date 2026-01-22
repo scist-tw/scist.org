@@ -2,31 +2,31 @@
   {
     "icon": "Facebook",
     "label": "Facebook",
-    "href": "https://facebook.com/scist",
+    "href": "https://www.facebook.com/scist.tw",
     "ariaLabel": "Visit SCIST on Facebook"
   },
   {
     "icon": "Instagram",
     "label": "Instagram",
-    "href": "https://instagram.com/scist",
+    "href": "https://www.instagram.com/scist.tw/",
     "ariaLabel": "Visit SCIST on Instagram"
   },
   {
     "icon": "SiDiscord",
     "label": "Discord",
-    "href": "https://discord.gg/scist",
+    "href": "http://dc.scist.org/",
     "ariaLabel": "Join SCIST Discord"
   },
   {
     "icon": "Mail",
     "label": "Email",
-    "href": "mailto:contact@scist.org",
+    "href": "mailto:official@scist.org",
     "ariaLabel": "Email SCIST"
   },
   {
     "icon": "BookOpen",
     "label": "HackMD",
-    "href": "https://hackmd.io/scist",
+    "href": "https://hackmd.io/@SCIST",
     "ariaLabel": "Visit SCIST HackMD"
   }
 ]
