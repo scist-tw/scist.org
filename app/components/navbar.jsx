@@ -10,6 +10,7 @@ export default function Navbar() {
     { label: "寒訓網站", href: "https://scist.camp", target: "_blank" },
     { label: "關於我們", href: "#about" },
     { label: "課程內容", href: "#activities" },
+    { label: "公開日曆", href: "#calendar" },
     { label: "參與學校", href: "#organizations" },
     { label: "合作夥伴", href: "#partners" },
     { label: "聯絡資訊", href: "#contact" },

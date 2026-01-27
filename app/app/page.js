@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import AboutSection from "@/components/about";
 import ActivitiesSection from "@/components/activities";
+import CalendarSection from "@/components/calendar";
 import OrganizationsSection from "@/components/organizations";
 import PartnersSection from "@/components/sponsors";
 import ContactSection from "@/components/contact";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <ActivitiesSection />
+      <CalendarSection />
       <OrganizationsSection />
       <PartnersSection />
       <ContactSection />
