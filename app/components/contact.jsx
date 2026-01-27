@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { SiDiscord } from "react-icons/si";
 import { useEffect, useState } from "react";
+import Footer from "./footer";
 
 export default function ContactSection() {
   const ICONS = { Facebook, Instagram, Mail, BookOpen, SiDiscord };
@@ -45,6 +46,7 @@ export default function ContactSection() {
       active = false;
     };
   }, []);
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,14 +78,7 @@ export default function ContactSection() {
           })}
         </div>
       </div>
-
-      <footer className="border-t border-primary/10 mt-20 py-6 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-foreground/60 text-sm">
-            Copyright © {new Date().getFullYear()} SCIST. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </section>
   );
 }
