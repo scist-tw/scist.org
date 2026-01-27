@@ -57,7 +57,7 @@ export default function PartnersSection() {
               {tier.title ?? tier.name ?? ""}
               </h3>
 
-              <div className="flex flex-wrap justify-center gap-5">
+              <div className="flex flex-nowrap justify-center items-center overflow-x-auto gap-5 snap-x snap-mandatory">
               {items.map((item, iIdx) => {
                 const name = typeof item === "string" ? item : item?.name ?? "";
                 const image = typeof item === "object" ? item?.image : undefined;
@@ -66,7 +66,7 @@ export default function PartnersSection() {
                 return (
                 <div
                   key={iIdx}
-                  className={`bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all w-full max-w-[300px]${website ? " cursor-pointer" : ""}`}
+                  className={`bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all flex-none w-64 snap-start${website ? " cursor-pointer" : ""}`}
                   onClick={() => {
                   if (website) window.open(website, "_blank", "noopener,noreferrer");
                   }}
