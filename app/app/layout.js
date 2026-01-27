@@ -7,27 +7,31 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata = {
   title: "SCIST | 南臺灣學生資訊社群",
   description: "Students' Community of Information in Southern Taiwan",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/SCIST Logo/黑字.svg",
-        type: "image/svg+xml",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/SCIST Logo/白字.svg",
-        type: "image/svg+xml",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/SCIST Logo/白底黑字.png",
-        type: "image/png",
-      },
-    ]
-  },
-};
+  keywords: [],
+  authors: [{ name: "SCIST" }],
 
+  metadataBase: new URL("https://scist.org"),
+
+  openGraph: {
+    title: "SCIST | 南臺灣學生資訊社群",
+    description: "Students' Community of Information in Southern Taiwan",
+    url: "https://scist.org",
+    siteName: "scist.org",
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/scist-tw/scist.org/182684c1d597522a1bd9e6b9d0fe2694f2f83600/app/public/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "SCIST | 南臺灣學生資訊社群",
+    description: "Students' Community of Information in Southern Taiwan",
+    images: ["https://raw.githubusercontent.com/scist-tw/scist.org/182684c1d597522a1bd9e6b9d0fe2694f2f83600/app/public/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"],
+  }
+};
 
 export default function RootLayout({ children }) {
   return (
