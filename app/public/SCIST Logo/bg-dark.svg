@@ -1,21 +1,25 @@
-<svg version="1.1"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="461.83528"
-     height="125"
-     viewBox="0,0,461.83528,125">
-  
-  <rect x="0" y="0" width="100%" height="100%" fill="#0C1117"/>
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  width="461.83528"
+  height="125"
+  viewBox="-56 -16 573.83528 157">
+
+  <!-- Background -->
+  <rect
+    x="-56"
+    y="-16"
+    width="573.83528"
+    height="157"
+    fill="#0C1117" />
 
   <g transform="translate(-10.83138,-120.77778)">
-    <g data-paper-data="{&quot;isPaintingLayer&quot;:true}"
-       fill="none"
-       fill-rule="nonzero"
-       stroke-width="10"
-       stroke-linecap="round"
-       stroke-linejoin="miter"
-       stroke-miterlimit="10"
-       style="mix-blend-mode: normal">
+    <g
+      fill="none"
+      stroke-width="10"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-miterlimit="10">
 
       <path d="M31.83334,185.16667c0,0 -16.20637,-3.87911 -16,-20c0.20544,-16.04823 16,-19.5 16,-19.5h49.5" stroke="#ffffff"/>
       <path d="M66.33138,184.66667c0,0 16.20637,3.87911 16,20c-0.20544,16.04823 -16,19.5 -16,19.5h-49.5" stroke="#ffffff"/>
@@ -27,7 +31,6 @@
       <path d="M398.66667,145.66666h69" stroke="#ffffff"/>
       <path d="M433.66667,146.16666v77" stroke="#ffffff"/>
       <path d="M251.86112,125.77778l-18.66667,115" stroke="#3c74a3"/>
-
     </g>
   </g>
 </svg>
