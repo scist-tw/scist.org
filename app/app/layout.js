@@ -6,32 +6,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SCIST | 南臺灣學生資訊社群",
-  description: "Students' Community of Information in Southern Taiwan",
-  keywords: [],
-  authors: [{ name: "SCIST" }],
-
-  metadataBase: new URL("https://scist.org"),
-
-  openGraph: {
-    title: "SCIST | 南臺灣學生資訊社群",
-    description: "Students' Community of Information in Southern Taiwan",
-    url: "https://scist.org",
-    siteName: "scist.org",
-    images: [
-      {
-        url: "https://raw.githubusercontent.com/scist-tw/scist.org/182684c1d597522a1bd9e6b9d0fe2694f2f83600/app/public/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg",
-      },
-    ],
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary",
-    title: "SCIST | 南臺灣學生資訊社群",
-    description: "Students' Community of Information in Southern Taiwan",
-    images: ["https://raw.githubusercontent.com/scist-tw/scist.org/182684c1d597522a1bd9e6b9d0fe2694f2f83600/app/public/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"],
-  }
+  description: "SCIST 是一群來自嘉義、台南、高雄和屏東四地的高中學生，經過許多活動以及比賽後深深感受到南北資訊能力以及資源的落差，我們希望透過 SCIST 舉辦的課程、研討會帶動南部學生的資訊能力水平，同時也帶來更多資源提供所有人進行學習！",
 };
+
 
 export default function RootLayout({ children }) {
   return (
