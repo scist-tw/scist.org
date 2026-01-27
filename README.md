@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="app/public/SCIST Logo/白字.svg">
-  <source media="(prefers-color-scheme: light)" srcset="app/public/SCIST Logo/黑字.svg">
+  <source media="(prefers-color-scheme: light)" srcset="app/public/SCIST Logo/灰字.svg">
   <img alt="SCIST Logo" src="app/public/SCIST Logo/灰字.svg" width="250" style=margin-bottom:1rem />
 </picture>
 
