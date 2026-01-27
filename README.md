@@ -1,7 +1,5 @@
 # scist.org
 
-## paths
-
 |  內容  |  path |
 | ------ | -------- |
 | 主頁連結 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/hero">/app/public/data/hero</a> |
@@ -36,12 +34,13 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/activities/data.
 
 ### 參與學校
 https://github.com/scist-tw/scist.org/tree/main/app/public/data/organizations/data.json
+> 注意 社團 Instagram 是指使用者名稱，非 Instagram 個人檔案連結
 ```json
 [
   {
-    "name": "區域",
+    "name": "<地區>",
     "clubs": [
-      { "school": "", "image": "", "name": "", "instagram": "" },
+      { "school": "<學校>", "image": "<社團logo>", "name": "<社團名稱>", "instagram": "<社團Instagram使用者名稱>" },
     ]
   }
 ]
@@ -49,12 +48,13 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/organizations/da
 
 ### 合作夥伴
 https://github.com/scist-tw/scist.org/tree/main/app/public/data/sponsors/data.json
+> <單位網站> 可留空
 ```json
 [
     {
-      "title": "單位分類",
+      "title": "合作分類",
       "items": [
-        {"name": "", "image": "", "website": ""}
+        {"name": "<單位名稱>", "image": "<單位logo>", "website": "<單位網站>"}
       ]
     }
   ]
@@ -62,13 +62,14 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/sponsors/data.js
 
 ### 聯絡資訊
 https://github.com/scist-tw/scist.org/tree/main/app/public/data/contact/data.json
+> 若圖示未顯示，請確認 `contact.jsx` 中是否正確匯入該圖示
 ```json
 [
   {
-    "icon": "",
-    "label": "",
-    "href": "",
-    "ariaLabel": ""
+    "icon": "<圖標>",
+    "label": "<標題>",
+    "href": "<導向連結>",
+    "ariaLabel": "<無障礙名稱>"
   }
 ]
 ```
