@@ -80,13 +80,13 @@ export default function Hero() {
           </div>
         </div>
       ) : (
-        <div className="absolute bottom-6 left-0 right-0 z-10">
+        <div className="absolute bottom-10 left-0 right-0 z-10">
           <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4">
             {links.map((link, i) => (
               <a
                 key={i}
                 href={link.url}
-                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm transition-transform duration-200 hover:scale-105"
+                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm transition-transform duration-200 hover:scale-115"
               >
                 <Link2 className="w-4 h-4" aria-hidden="true" />
                 {link.title}
