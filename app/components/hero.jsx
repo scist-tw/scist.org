@@ -80,7 +80,7 @@ export default function Hero() {
           </div>
         </div>
       ) : (
-        <div className="absolute bottom-10 left-0 right-0 z-10">
+        <div className="absolute bottom-14 left-0 right-0 z-10">
           <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4">
             {links.map((link, i) => (
               <a
