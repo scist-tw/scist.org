@@ -65,14 +65,14 @@ export default function ActivitiesSection() {
         ? src
         : `/data/activities/${src}`;
     return (
-      <div className="relative h-48 md:h-full w-auto overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
-        <Image
-          src={finalSrc}
-          alt={alt}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover"
-        />
+      <div className="relative h-48 md:h-full w-full overflow-hidden rounded-lg bg-gray-50">
+      <Image
+        src={finalSrc}
+        alt={alt}
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        className="object-contain object-center"
+      />
       </div>
     );
   };
