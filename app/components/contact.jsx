@@ -68,7 +68,7 @@ export default function ContactSection() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                   <IconComponent className="w-8 h-8 text-primary" />
                 </div>
-                <p className="text-foreground group-hover:text-primary transition-colors">
+                <p className="text-foreground group-hover:text-primary transition-colors font-bold">
                   {link.label}
                 </p>
               </a>
