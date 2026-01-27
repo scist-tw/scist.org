@@ -11,21 +11,23 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/SCIST Logo/黑字.svg",
+        type: "image/svg+xml",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/SCIST Logo/白字.svg",
+        type: "image/svg+xml",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/SCIST Logo/白底黑字.png",
+        type: "image/png",
       },
-    ],
-    apple: "/apple-icon.png",
+    ]
   },
 };
+
 
 export default function RootLayout({ children }) {
   return (
