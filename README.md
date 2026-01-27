@@ -14,6 +14,19 @@ Official website of SCIST
 
 - Next.js + Tailwind CSS + Shadcn
 
+## 快速開始
+
+### 1) 安裝依賴
+```
+npm install
+```
+### 2) 啟動開發環境
+
+```
+cd app
+npm run dev
+```
+
 ## 引用資料
 - 主頁連結：<a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/hero">/app/public/data/hero</a>
 - 課程內容：<a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/activities">/app/public/data/activities</a>
