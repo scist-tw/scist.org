@@ -10,22 +10,34 @@ Official website of SCIST
 
 </div>
 
-
 ---
 
-|  內容  |  path |
-| ------ | -------- |
-| 主頁連結 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/hero">/app/public/data/hero</a> |
-| 課程內容 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/activities">/app/public/data/activities</a> |
-| 參與學校 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/organizations">/app/public/data/organizations</a> |
-| 合作夥伴 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/sponsors">/app/public/data/sponsors</a> |
-| 聯絡資訊 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/contact">/app/public/data/contact</a> |
+- Next.js + Tailwind CSS + Shadcn
 
-有圖片的項目，圖片一律放在項目的資料夾中，跟 `data.json` 同層
+## 快速開始
 
-## 格式
-### 主頁連結
-https://github.com/scist-tw/scist.org/tree/main/app/public/data/hero/data.json
+### 1) 安裝依賴
+```
+npm install
+```
+### 2) 啟動開發環境
+
+```
+cd app
+npm run dev
+```
+
+## 引用資料
+- 主頁連結：<a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/hero">/app/public/data/hero</a>
+- 課程內容：<a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/activities">/app/public/data/activities</a>
+- 參與學校：<a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/organizations">/app/public/data/organizations</a>
+- 合作夥伴：<a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/sponsors">/app/public/data/sponsors</a>
+- 聯絡資訊：<a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/contact">/app/public/data/contact</a>
+
+每個分類的資料夾都會有一個 `data.json`，有圖片的項目，圖片一律放在項目資料夾中，與 `data.json` 同層。
+
+### 格式
+#### 主頁連結
 ```json
 [
   { "title": "<連結標題>", "url": "<連結網址>" }
@@ -33,8 +45,7 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/hero/data.json
 
 ```
 
-### 課程內容
-https://github.com/scist-tw/scist.org/tree/main/app/public/data/activities/data.json
+#### 課程內容
 ```json
 [
   {
@@ -47,9 +58,7 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/activities/data.
 ]
 ```
 
-### 參與學校
-https://github.com/scist-tw/scist.org/tree/main/app/public/data/organizations/data.json
-> 注意 社團 Instagram 是指使用者名稱，非 Instagram 個人檔案連結
+#### 參與學校
 ```json
 [
   {
@@ -60,10 +69,9 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/organizations/da
   }
 ]
 ```
+備註：社團 Instagram 是使用者名稱，非 Instagram 個人檔案連結
 
-### 合作夥伴
-https://github.com/scist-tw/scist.org/tree/main/app/public/data/sponsors/data.json
-> <單位網站> 可留空
+#### 合作夥伴
 ```json
 [
     {
@@ -74,10 +82,9 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/sponsors/data.js
     }
   ]
 ```
+備註：<單位網站> 可留空
 
-### 聯絡資訊
-https://github.com/scist-tw/scist.org/tree/main/app/public/data/contact/data.json
-> 若圖示未顯示，請確認 `contact.jsx` 中是否正確匯入該圖示
+#### 聯絡資訊
 ```json
 [
   {
@@ -88,5 +95,6 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/contact/data.jso
   }
 ]
 ```
+備註：若圖示未顯示，請確認 `contact.jsx` 中是否正確匯入該圖示
 
 <!-- https://hackmd.io/Zjm1UiDsTWmio1jO8dycCA?both -->
