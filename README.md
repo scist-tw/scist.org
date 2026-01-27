@@ -8,12 +8,14 @@
 | 合作夥伴 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/sponsors">/app/public/data/sponsors</a> |
 | 聯絡資訊 | <a href="https://github.com/scist-tw/scist.org/tree/main/app/public/data/contact">/app/public/data/contact</a> |
 
+有圖片的項目，圖片一律放在項目的資料夾中，跟 `data.json` 同層
+
 ## 格式
 ### 主頁連結
 https://github.com/scist-tw/scist.org/tree/main/app/public/data/hero/data.json
 ```json
 [
-  { "title": "連結標題", "url": "連結url" }
+  { "title": "<連結標題>", "url": "<連結網址>" }
 ]
 
 ```
@@ -23,11 +25,11 @@ https://github.com/scist-tw/scist.org/tree/main/app/public/data/activities/data.
 ```json
 [
   {
-    "title": "",
-    "description": "",
-    "content": ["", "", ""],
-    "goal": "",
-    "image": ""
+    "title": "<課程標題>",
+    "description": "<課程簡介>",
+    "content": ["<內容>", "<內容>", "<內容>"],
+    "goal": "<課程目標>",
+    "image": "<課程圖片>"
   }
 ]
 ```
