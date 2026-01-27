@@ -1,0 +1,12 @@
+{
+  "column1": [
+    { "title": "About SCIST", "url": "/about" },
+    { "title": "Events", "url": "/events" },
+    { "title": "Join Us", "url": "/join" }
+  ],
+  "column2": [
+    { "title": "Privacy Policy", "url": "/privacy" },
+    { "title": "Terms of Service", "url": "/terms" },
+    { "title": "Contact", "url": "/contact" }
+  ]
+}
