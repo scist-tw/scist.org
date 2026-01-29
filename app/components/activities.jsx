@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -38,8 +38,10 @@ export default function ActivitiesSection() {
       ? activity.content
       : Object.values(activity.content || {});
     return (
-      <div className="bg-white p-8 rounded-lg border border-gray-200 hover:border-primary hover:shadow-lg transition-all h-full">
-        <h3 className="text-xl font-bold text-primary mb-2">{activity.title}</h3>
+      <div className="bg-white p-8 rounded-lg transition-all h-full">
+        <h3 className="text-xl font-bold text-primary mb-2">
+          {activity.title}
+        </h3>
         {activity.description && (
           <p className="text-foreground/70 mb-4">{activity.description}</p>
         )}
@@ -66,13 +68,13 @@ export default function ActivitiesSection() {
         : `/data/activities/${src}`;
     return (
       <div className="relative h-48 md:h-full w-full overflow-hidden rounded-lg bg-gray-50">
-      <Image
-        src={finalSrc}
-        alt={alt}
-        fill
-        sizes="(min-width: 768px) 50vw, 100vw"
-        className="object-contain object-center"
-      />
+        <Image
+          src={finalSrc}
+          alt={alt}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-contain object-center"
+        />
       </div>
     );
   };

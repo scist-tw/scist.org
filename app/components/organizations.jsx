@@ -50,18 +50,18 @@ export default function OrganizationsSection() {
               <h3 className="text-2xl font-bold text-primary mb-6">
                 {region.name}
               </h3>
-              <div className="space-y-4 flex flex-col">
+              <div className="space-y-3 flex flex-col">
                 {region.clubs.map((club, index) => (
                   <div
                     key={index}
-                    className="bg-primary/5 border border-primary/20 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary/40 p-4 flex gap-4 items-center"
+                    className="bg-primary/10 rounded-3xl overflow-hidden p-4 flex gap-4 items-center"
                   >
                     <div className="shrink-0">
                       <Image
                         src={`/data/organizations/${club.image}`}
                         alt={`${club.school} logo`}
-                        width={70}
-                        height={70}
+                        width={80}
+                        height={80}
                         className="rounded-full"
                       />
                     </div>
@@ -74,15 +74,17 @@ export default function OrganizationsSection() {
                         {club.name}
                       </p>
 
-                      {club.instagram && (<Link
-                        href={`https://instagram.com/${club.instagram}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors text-xs font-medium"
-                      >
-                        <Instagram size={14} />
-                        <span>{club.instagram}</span>
-                      </Link>)}
+                      {club.instagram && (
+                        <Link
+                          href={`https://instagram.com/${club.instagram}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors text-xs font-medium"
+                        >
+                          <Instagram size={14} />
+                          <span>{club.instagram}</span>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 ))}

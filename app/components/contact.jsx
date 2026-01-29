@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  BookOpen,
-} from "lucide-react";
+import { Facebook, Instagram, Mail, BookOpen } from "lucide-react";
 import { SiDiscord } from "react-icons/si";
 import { useEffect, useState } from "react";
 import Footer from "./footer";

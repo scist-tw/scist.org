@@ -23,24 +23,24 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="bg-primary/10 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-primary mb-6">我們的使命</h3>
+          <div className="bg-primary rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">我們的使命</h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
-                <span className="text-primary font-bold">✓</span>
-                <span className="text-foreground">推廣資訊科技教育</span>
+                <span className="text-white font-bold">✓</span>
+                <span className="text-white">推廣資訊科技教育</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-primary font-bold">✓</span>
-                <span className="text-foreground">連結學生資源與機會</span>
+                <span className="text-white font-bold">✓</span>
+                <span className="text-white">連結學生資源與機會</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-primary font-bold">✓</span>
-                <span className="text-foreground">培養業界領袖與人才</span>
+                <span className="text-white font-bold">✓</span>
+                <span className="text-white">培養業界領袖與人才</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-primary font-bold">✓</span>
-                <span className="text-foreground">建立永續的社群網絡</span>
+                <span className="text-white font-bold">✓</span>
+                <span className="text-white">建立永續的社群網絡</span>
               </li>
             </ul>
           </div>

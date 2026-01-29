@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -51,44 +51,48 @@ export default function PartnersSection() {
             : Array.isArray(tier?.sponsors)
               ? tier.sponsors
               : Object.values(tier?.items || tier?.sponsors || {});
-            return (
+          return (
             <div key={tIdx} className="mb-12">
-              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-              {tier.title ?? tier.name ?? ""}
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-left">
+                {tier.title ?? tier.name ?? ""}
               </h3>
 
-              <div className="flex flex-nowrap justify-center items-center overflow-x-auto gap-5 snap-x snap-mandatory">
-              {items.map((item, iIdx) => {
-                const name = typeof item === "string" ? item : item?.name ?? "";
-                const image = typeof item === "object" ? item?.image : undefined;
-                const website = typeof item === "object" ? item?.website : undefined;
+              <div className="flex flex-wrap justify-center items-center gap-4">
+                {items.map((item, iIdx) => {
+                  const name =
+                    typeof item === "string" ? item : (item?.name ?? "");
+                  const image =
+                    typeof item === "object" ? item?.image : undefined;
+                  const website =
+                    typeof item === "object" ? item?.website : undefined;
 
-                return (
-                <div
-                  key={iIdx}
-                  className={`bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all flex-none w-64 snap-start${website ? " cursor-pointer" : ""}`}
-                  onClick={() => {
-                  if (website) window.open(website, "_blank", "noopener,noreferrer");
-                  }}
-                >
-                  {image && (
-                  <Image
-                    src={`/data/sponsors/${image}`}
-                    alt={name}
-                    width={70}
-                    height={70}
-                    className="w-full h-40 object-cover rounded-md mb-4 bg-white"
-                  />
-                  )}
-                  <p className="text-sm font-medium text-gray-500 text-center">
-                  {name}
-                  </p>
-                </div>
-                );
-              })}
+                  return (
+                    <div
+                      key={iIdx}
+                      className={`bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all flex-none w-1/2 sm:w-56 md:w-64${website ? " cursor-pointer" : ""}`}
+                      onClick={() => {
+                        if (website)
+                          window.open(website, "_blank", "noopener,noreferrer");
+                      }}
+                    >
+                      {image && (
+                        <Image
+                          src={`/data/sponsors/${image}`}
+                          alt={name}
+                          width={70}
+                          height={70}
+                          className="w-full h-28 sm:h-32 object-contain rounded-md mb-4 bg-white"
+                        />
+                      )}
+                      <p className="text-sm font-medium text-gray-500 text-center">
+                        {name}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-            );
+          );
         })}
       </div>
     </section>
