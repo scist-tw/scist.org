@@ -45,7 +45,7 @@ export default function Hero() {
       <div className="relative z-10 text-center text-white">
         <div className="flex justify-center mb-6">
           <img
-            src="/SCIST Logo/黑字.svg"
+            src="/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"
             alt="SCIST Logo"
             className="h-40 w-auto bg-white px-8 py-5 rounded-3xl"
           />
