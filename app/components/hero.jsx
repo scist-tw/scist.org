@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center pt-16"
       style={{
-        backgroundImage: 'url("https://scist.org/static/images/hero.jpg")',
+        backgroundImage: "url('/hero.webp')"
       }}
     >
       {/* Overlay with background blur */}

@@ -26,7 +26,7 @@ export default function Navbar() {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <img
-              src="https://scist.org/static/images/index.png"
+              src="/index.webp"
               alt="SCIST Logo"
               className="h-6 w-auto"
             />
