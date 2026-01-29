@@ -16,14 +16,14 @@ export default function AboutSection() {
               是一群來自嘉義、台南、高雄和屏東的高中學生，致力於推廣資訊科技知識，連結南臺灣各年齡的資訊學生。
             </p>
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-              我們透過舉辦課程、營隊和研討會，為學生提供學習和交流的環境，帶動南部學生的資訊能力水平，同時也帶來更多資源提供所有人進行學習！
+              我們透過舉辦課程、營隊和研討會，為學生提供學習和交流的環境，帶動南部學生的資訊能力水平，同時也帶來更多資源提供所有人進行學習。
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
               加入 SCIST，一起探索資訊世界的無限可能！
             </p>
           </div>
 
-          <div className="bg-primary rounded-lg p-8">
+          {/* <div className="bg-primary rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-6">我們的使命</h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
@@ -43,7 +43,7 @@ export default function AboutSection() {
                 <span className="text-white">建立永續的社群網絡</span>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
