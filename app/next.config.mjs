@@ -3,7 +3,28 @@ const nextConfig = {
   output: "export",
   images: {
     unoptimized: true,
-    domains: ["placehold.co", "media.discordapp.net", "scist.org", "scist.net"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "media.discordapp.net",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "scist.org",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "scist.net",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
