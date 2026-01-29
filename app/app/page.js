@@ -10,7 +10,7 @@ import ScrollTop from "@/components/scrollTop";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen">
       <Navbar />
       <Hero />
       <AboutSection />

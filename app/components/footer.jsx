@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Footer() {
-  const [footerLinks, setFooterLinks] = useState({ column1: [], column2: [] });
+  const [footerLinks, setFooterLinks] = useState([]);
   const [footerLoading, setFooterLoading] = useState(true);
   const [footerError, setFooterError] = useState(null);
 
@@ -11,7 +12,7 @@ export default function Footer() {
     Array.isArray(list)
       ? list
           .filter((i) => i && i.title && i.url)
-          .map((i) => ({ title: i.title, url: i.url }))
+          .map((i) => ({ title: i.title, url: i.url, newTab: !!i.newTab }))
       : [];
 
   useEffect(() => {
@@ -23,10 +24,13 @@ export default function Footer() {
       })
       .then((data) => {
         if (active) {
-          setFooterLinks({
-            column1: normalizeList(data?.column1),
-            column2: normalizeList(data?.column2),
-          });
+          const links = Array.isArray(data)
+            ? normalizeList(data)
+            : [
+                ...normalizeList(data?.column1),
+                ...normalizeList(data?.column2),
+              ];
+          setFooterLinks(links);
           setFooterLoading(false);
         }
       })
@@ -44,43 +48,24 @@ export default function Footer() {
   return (
     <footer className="border-t border-primary/10 mt-20 py-6 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* {!footerLoading && !footerError && (
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 mb-6">
-            <a href="/" className="flex items-center gap-3">
-              <img
-                src="/public/SCIST Logo/黑字.svg"
-                alt="SCIST"
-                className="h-10 w-10 rounded-md"
-              />
-              <span className="text-xl font-bold text-foreground">SCIST</span>
-            </a>
-
-            <div className="flex flex-1 justify-start md:justify-end gap-12">
-              <nav aria-label="Footer links column 1" className="flex flex-col gap-2 min-w-[160px]">
-                {footerLinks.column1.map((link) => (
-                  <a
-                    key={`c1-${link.title}`}
-                    href={link.url}
-                    className="text-base md:text-lg font-medium text-foreground/80 hover:text-primary transition-colors"
-                  >
-                    {link.title}
-                  </a>
-                ))}
-              </nav>
-              <nav aria-label="Footer links column 2" className="flex flex-col gap-2 min-w-[160px]">
-                {footerLinks.column2.map((link) => (
-                  <a
-                    key={`c2-${link.title}`}
-                    href={link.url}
-                    className="text-base md:text-lg font-medium text-foreground/80 hover:text-primary transition-colors"
-                  >
-                    {link.title}
-                  </a>
-                ))}
-              </nav>
-            </div>
-          </div>
-        )} */}
+        {!footerLoading && !footerError && (
+          <nav
+            aria-label="Footer links"
+            className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mb-6"
+          >
+            {footerLinks.map((link) => (
+              <a
+                key={link.title}
+                href={link.url}
+                className="text-base md:text-lg font-medium text-foreground/80 hover:text-primary transition-colors"
+                target={link.newTab ? "_blank" : undefined}
+                rel={link.newTab ? "noopener noreferrer" : undefined}
+              >
+                {link.title}
+              </a>
+            ))}
+          </nav>
+        )}
         <p className="text-center text-foreground/60 text-sm">
           Copyright © {new Date().getFullYear()} SCIST. All rights reserved.
         </p>

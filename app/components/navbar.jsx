@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <img
@@ -48,7 +48,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 cursor-pointer">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 cursor-pointer"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
