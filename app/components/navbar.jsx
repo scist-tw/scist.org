@@ -29,6 +29,7 @@ export default function Navbar() {
               src="/index.webp"
               alt="SCIST Logo"
               className="h-6 w-auto"
+              fetchPriority="high"
             />
           </a>
 
