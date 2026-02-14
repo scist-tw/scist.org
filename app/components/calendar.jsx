@@ -1,17 +1,18 @@
 "use client";
+import FadeInSection from "./FadeInSection";
 
 export default function CalendarSection() {
   return (
     <section id="calendar" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
+        <FadeInSection className="mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
             公開日曆
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
-        </div>
+        </FadeInSection>
 
-        <div className="rounded-lg border border-gray-200 overflow-hidden bg-white">
+        <FadeInSection className="rounded-lg border border-gray-200 overflow-hidden bg-white">
           <div className="w-full h-[550px]">
             <iframe
               title="SCIST Calendar"
@@ -23,7 +24,7 @@ export default function CalendarSection() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-        </div>
+        </FadeInSection>
       </div>
     </section>
   );

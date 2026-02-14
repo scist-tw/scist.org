@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram } from "lucide-react";
 import { useEffect, useState } from "react";
+import FadeInSection from "./FadeInSection";
 
 export default function OrganizationsSection() {
   const [regions, setRegions] = useState([]);
@@ -37,22 +38,24 @@ export default function OrganizationsSection() {
   return (
     <section id="organizations" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
+        <FadeInSection className="mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
             參與學校
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
-        </div>
+        </FadeInSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {regions.map((region) => (
             <div key={region.name} className="flex flex-col">
-              <h3 className="text-2xl font-bold text-primary mb-6">
-                {region.name}
-              </h3>
+              <FadeInSection>
+                <h3 className="text-3xl font-bold text-primary mb-6">
+                  {region.name}
+                </h3>
+              </FadeInSection>
               <div className="space-y-3 flex flex-col">
                 {region.clubs.map((club, index) => (
-                  <div key={index}>
+                  <FadeInSection key={index}>
                     {club.instagram ? (
                       <div className="group perspective-[1000px] h-28">
                         <div className="cursor-pointer relative h-full w-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
@@ -68,10 +71,10 @@ export default function OrganizationsSection() {
                               />
                             </div>
                             <div className="grow min-w-0">
-                              <h4 className="font-bold text-foreground text-sm mb-1 truncate">
+                              <h4 className="font-bold text-foreground text-lg mb-1 truncate">
                                 {club.school}
                               </h4>
-                              <p className="text-xs text-muted-foreground mb-1 truncate">
+                              <p className="text-md font-bold text-muted-foreground mb-1 truncate">
                                 {club.name}
                               </p>
                             </div>
@@ -103,16 +106,16 @@ export default function OrganizationsSection() {
                           />
                         </div>
                         <div className="grow min-w-0">
-                          <h4 className="font-bold text-foreground text-sm mb-1 truncate">
+                          <h4 className="font-bold text-foreground text-lg mb-1 truncate">
                             {club.school}
                           </h4>
-                          <p className="text-xs text-muted-foreground mb-1 truncate">
+                          <p className="text-md font-bold text-muted-foreground mb-1 truncate">
                             {club.name}
                           </p>
                         </div>
                       </div>
                     )}
-                  </div>
+                  </FadeInSection>
                 ))}
               </div>
             </div>

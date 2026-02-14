@@ -57,7 +57,7 @@ export default function Footer() {
               <a
                 key={link.title}
                 href={link.url}
-                className="text-base md:text-lg font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="text-base font-bold md:text-lg text-foreground/80 hover:text-primary transition-colors"
                 target={link.newTab ? "_blank" : undefined}
                 rel={link.newTab ? "noopener noreferrer" : undefined}
               >
