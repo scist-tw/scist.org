@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function ActivitiesSection() {
@@ -38,13 +37,13 @@ export default function ActivitiesSection() {
       ? activity.content
       : Object.values(activity.content || {});
     return (
-      <div className="bg-white p-8 rounded-lg transition-all h-full">
+      <div className="bg-white p-8 rounded-lg transition-all w-100">
         <h3 className="text-xl font-bold text-primary mb-2">
           {activity.title}
         </h3>
-        {activity.description && (
+        {/* {activity.description && (
           <p className="text-foreground/70 mb-4">{activity.description}</p>
-        )}
+        )} */}
         {contentItems.length > 0 ? (
           <ul className="list-disc list-inside space-y-1 text-foreground/80">
             {contentItems.map((item, i) => (
@@ -61,24 +60,6 @@ export default function ActivitiesSection() {
     );
   };
 
-  const ActivityImage = ({ src, alt }) => {
-    const finalSrc =
-      typeof src === "string" && (src.startsWith("http") || src.startsWith("/"))
-        ? src
-        : `/data/activities/${src}`;
-    return (
-      <div className="relative h-48 md:h-full w-full overflow-hidden rounded-lg bg-gray-50">
-        <Image
-          src={finalSrc}
-          alt={alt}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-contain object-center"
-        />
-      </div>
-    );
-  };
-
   return (
     <section id="activities" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,31 +70,9 @@ export default function ActivitiesSection() {
           <div className="w-20 h-1 bg-primary rounded-full" />
         </div>
 
-        <div className="space-y-10">
+        <div className="justify-center grid gap-8 sm:grid-cols-2 lg:grid-cols-2 justify-items-center">
           {activities.map((activity, idx) => (
-            <div key={idx} className="grid md:grid-cols-2 gap-8 items-stretch">
-              {idx % 2 === 0 ? (
-                <>
-                  <ActivityCard activity={activity} />
-                  {activity?.image && (
-                    <ActivityImage
-                      src={activity.image}
-                      alt={`${activity.title} 課程/時程圖片`}
-                    />
-                  )}
-                </>
-              ) : (
-                <>
-                  {activity?.image && (
-                    <ActivityImage
-                      src={activity.image}
-                      alt={`${activity.title} 課程/時程圖片`}
-                    />
-                  )}
-                  <ActivityCard activity={activity} />
-                </>
-              )}
-            </div>
+            <ActivityCard key={idx} activity={activity} />
           ))}
         </div>
       </div>
