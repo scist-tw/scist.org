@@ -55,7 +55,7 @@ export default function OrganizationsSection() {
                   <div key={index}>
                     {club.instagram ? (
                       <div className="group perspective-[1000px] h-28">
-                        <div className="relative h-full w-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
+                        <div className="cursor-pointer relative h-full w-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                           {/* Front */}
                           <div className="absolute inset-0 bg-white rounded-3xl overflow-hidden p-4 flex gap-4 items-center backface-hidden">
                             <div className="shrink-0">
@@ -82,7 +82,7 @@ export default function OrganizationsSection() {
                             href={`https://instagram.com/${club.instagram}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="absolute inset-0 rounded-3xl overflow-hidden p-4 flex flex-col items-center justify-center bg-linear-to-br from-pink-500 to-purple-600 text-white transform-[rotateY(180deg)] backface-hidden"
+                            className="absolute inset-0 rounded-3xl overflow-hidden p-4 flex flex-col items-center justify-center bg-[linear-gradient(135deg,#f58529,#feda77,#dd2a7b,#8134af,#515bd4)] text-white transform-[rotateY(180deg)] backface-hidden"
                           >
                             <Instagram size={24} />
                             <span className="mt-2 font-semibold text-sm truncate">

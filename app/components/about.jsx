@@ -10,7 +10,6 @@ export default function AboutSection() {
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
         </div>
-
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
@@ -45,6 +44,7 @@ export default function AboutSection() {
             </a>
           </div>
         </div>
+        <div>hello</div>
       </div>
     </section>
   );
