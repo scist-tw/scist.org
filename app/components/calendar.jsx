@@ -12,7 +12,7 @@ export default function CalendarSection() {
         </div>
 
         <div className="rounded-lg border border-gray-200 overflow-hidden bg-white">
-          <div className="w-full h-[600px] md:h-[800px]">
+          <div className="w-full h-[550px]">
             <iframe
               title="SCIST Calendar"
               src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTaipei&bgcolor=%23ffffff&src=Y19jMzBmYmEzMGY4NWM2MThjNmU2ZDFhODk3N2QyMzg3NGQ3ZDAzYzQ3ZjdhMmNiZGM0Njg2MTNlZjljNmVhNzk3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"

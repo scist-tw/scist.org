@@ -1,3 +1,5 @@
+import { ExternalLink } from "lucide-react";
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-white">
@@ -23,27 +25,25 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* <div className="bg-primary rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">我們的使命</h3>
-            <ul className="space-y-4">
-              <li className="flex gap-3">
-                <span className="text-white font-bold">✓</span>
-                <span className="text-white">推廣資訊科技教育</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-white font-bold">✓</span>
-                <span className="text-white">連結學生資源與機會</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-white font-bold">✓</span>
-                <span className="text-white">培養業界領袖與人才</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-white font-bold">✓</span>
-                <span className="text-white">建立永續的社群網絡</span>
-              </li>
-            </ul>
-          </div> */}
+          <div className="text-center rounded-lg lg:mt-[-60]">
+            <div className="flex justify-center">
+              <img
+                src="/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"
+                alt="SCIST Logo"
+                className="h-40 w-auto bg-white px-8 py-5 rounded-3xl"
+              />
+            </div>
+            <a
+              key={"branding"}
+              href={"/branding"}
+              className="inline-flex items-center gap-2 text-sm font-bold md:text-xl text-black max-w-2xl mx-auto hover:text-primary"
+              target={"_blank"}
+              rel={"noopener noreferrer"}
+            >
+              Branding
+              <ExternalLink />
+            </a>
+          </div>
         </div>
       </div>
     </section>

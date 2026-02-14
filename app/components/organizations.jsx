@@ -79,7 +79,7 @@ export default function OrganizationsSection() {
                           href={`https://instagram.com/${club.instagram}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors text-xs font-medium"
+                          className="inline-flex font-bold items-center gap-1 text-primary hover:text-primary/80 transition-colors text-xs"
                         >
                           <Instagram size={14} />
                           <span>{club.instagram}</span>
