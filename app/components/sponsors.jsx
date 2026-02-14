@@ -38,7 +38,7 @@ export default function PartnersSection() {
   }, []);
 
   return (
-    <section id="partners" className="py-20 bg-gray-50">
+    <section id="partners" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold text-foreground mb-4">合作夥伴</h2>

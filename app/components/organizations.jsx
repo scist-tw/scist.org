@@ -35,7 +35,7 @@ export default function OrganizationsSection() {
   }, []);
 
   return (
-    <section id="organizations" className="py-20 bg-white">
+    <section id="organizations" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
@@ -54,7 +54,7 @@ export default function OrganizationsSection() {
                 {region.clubs.map((club, index) => (
                   <div
                     key={index}
-                    className="bg-primary/10 rounded-3xl overflow-hidden p-4 flex gap-4 items-center"
+                    className="bg-white rounded-3xl overflow-hidden p-4 flex gap-4 items-center"
                   >
                     <div className="shrink-0">
                       <Image
