@@ -52,40 +52,66 @@ export default function OrganizationsSection() {
               </h3>
               <div className="space-y-3 flex flex-col">
                 {region.clubs.map((club, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-3xl overflow-hidden p-4 flex gap-4 items-center"
-                  >
-                    <div className="shrink-0">
-                      <Image
-                        src={`/data/organizations/${club.image}`}
-                        alt={`${club.school} logo`}
-                        width={80}
-                        height={80}
-                        className="rounded-full"
-                      />
-                    </div>
+                  <div key={index}>
+                    {club.instagram ? (
+                      <div className="group perspective-[1000px] h-28">
+                        <div className="relative h-full w-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
+                          {/* Front */}
+                          <div className="absolute inset-0 bg-white rounded-3xl overflow-hidden p-4 flex gap-4 items-center backface-hidden">
+                            <div className="shrink-0">
+                              <Image
+                                src={`/data/organizations/${club.image}`}
+                                alt={`${club.school} logo`}
+                                width={80}
+                                height={80}
+                                className="rounded-full"
+                              />
+                            </div>
+                            <div className="grow min-w-0">
+                              <h4 className="font-bold text-foreground text-sm mb-1 truncate">
+                                {club.school}
+                              </h4>
+                              <p className="text-xs text-muted-foreground mb-1 truncate">
+                                {club.name}
+                              </p>
+                            </div>
+                          </div>
 
-                    <div className="grow min-w-0">
-                      <h4 className="font-bold text-foreground text-sm mb-1 truncate">
-                        {club.school}
-                      </h4>
-                      <p className="text-xs text-muted-foreground mb-1 truncate">
-                        {club.name}
-                      </p>
-
-                      {club.instagram && (
-                        <Link
-                          href={`https://instagram.com/${club.instagram}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex font-bold items-center gap-1 text-primary hover:text-primary/80 transition-colors text-xs"
-                        >
-                          <Instagram size={14} />
-                          <span>{club.instagram}</span>
-                        </Link>
-                      )}
-                    </div>
+                          {/* Back */}
+                          <Link
+                            href={`https://instagram.com/${club.instagram}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="absolute inset-0 rounded-3xl overflow-hidden p-4 flex flex-col items-center justify-center bg-linear-to-br from-pink-500 to-purple-600 text-white transform-[rotateY(180deg)] backface-hidden"
+                          >
+                            <Instagram size={24} />
+                            <span className="mt-2 font-semibold text-sm truncate">
+                              @{club.instagram}
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="bg-white rounded-3xl overflow-hidden p-4 flex gap-4 items-center h-28">
+                        <div className="shrink-0">
+                          <Image
+                            src={`/data/organizations/${club.image}`}
+                            alt={`${club.school} logo`}
+                            width={80}
+                            height={80}
+                            className="rounded-full"
+                          />
+                        </div>
+                        <div className="grow min-w-0">
+                          <h4 className="font-bold text-foreground text-sm mb-1 truncate">
+                            {club.school}
+                          </h4>
+                          <p className="text-xs text-muted-foreground mb-1 truncate">
+                            {club.name}
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
