@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function ActivitiesSection() {
   const [activities, setActivities] = useState([]);
@@ -31,13 +31,42 @@ export default function ActivitiesSection() {
     };
   }, []);
 
-  const ActivityCard = ({ activity }) => {
+  const ActivityCard = ({ activity, index = 0 }) => {
     if (!activity) return null;
+    const cardRef = useRef(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+      const el = cardRef.current;
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setVisible(entry.isIntersecting);
+        },
+        { threshold: 0.25 },
+      );
+      observer.observe(el);
+      return () => observer.disconnect();
+    }, []);
     const contentItems = Array.isArray(activity.content)
       ? activity.content
       : Object.values(activity.content || {});
+    const dir = index % 2 === 0 ? -1 : 1;
+    const hiddenTransform = `perspective(900px) rotateX(10deg) rotateZ(${dir * 6}deg) translateX(${dir * 300}px)`;
+    const visibleTransform = `perspective(900px) rotateX(0deg) rotateZ(0deg) translateX(0px)`;
+
     return (
-      <div className="bg-white p-8 rounded-lg transition-all w-100">
+      <div
+        ref={cardRef}
+        className={
+          "bg-white p-8 rounded-lg w-100 transition-all duration-700 ease-out will-change-transform"
+        }
+        style={{
+          transform: visible ? visibleTransform : hiddenTransform,
+          opacity: visible ? 1 : 0,
+          transitionDelay: `${Math.min(index * 120, 480)}ms`,
+        }}
+      >
         <h3 className="text-xl font-bold text-primary mb-2">
           {activity.title}
         </h3>
@@ -72,7 +101,7 @@ export default function ActivitiesSection() {
 
         <div className="justify-center grid gap-8 sm:grid-cols-1 lg:grid-cols-2 justify-items-center">
           {activities.map((activity, idx) => (
-            <ActivityCard key={idx} activity={activity} />
+            <ActivityCard key={idx} activity={activity} index={idx} />
           ))}
         </div>
       </div>
