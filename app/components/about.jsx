@@ -1,17 +1,18 @@
 import { ExternalLink } from "lucide-react";
+import FadeInSection from "./FadeInSection";
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
+        <FadeInSection className="mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
             關於我們
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
-        </div>
+        </FadeInSection>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <FadeInSection>
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
               SCIST
               是一群來自嘉義、台南、高雄和屏東的高中學生，致力於推廣資訊科技知識，連結南臺灣各年齡的資訊學生。
@@ -22,9 +23,9 @@ export default function AboutSection() {
             <p className="text-lg text-foreground/80 leading-relaxed">
               加入 SCIST，一起探索資訊世界的無限可能！
             </p>
-          </div>
+          </FadeInSection>
 
-          <div className="text-center rounded-lg lg:mt-[-60]">
+          <FadeInSection className="text-center rounded-lg lg:mt-[-60]">
             <div className="flex justify-center">
               <img
                 src="/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"
@@ -42,9 +43,8 @@ export default function AboutSection() {
               Branding
               <ExternalLink />
             </a>
-          </div>
+          </FadeInSection>
         </div>
-        <div>hello</div>
       </div>
     </section>
   );
