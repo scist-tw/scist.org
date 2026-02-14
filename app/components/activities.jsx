@@ -70,7 +70,7 @@ export default function ActivitiesSection() {
           <div className="w-20 h-1 bg-primary rounded-full" />
         </div>
 
-        <div className="justify-center grid gap-8 sm:grid-cols-2 lg:grid-cols-2 justify-items-center">
+        <div className="justify-center grid gap-8 sm:grid-cols-1 lg:grid-cols-2 justify-items-center">
           {activities.map((activity, idx) => (
             <ActivityCard key={idx} activity={activity} />
           ))}
