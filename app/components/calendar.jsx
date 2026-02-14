@@ -12,7 +12,10 @@ export default function CalendarSection() {
           <div className="w-20 h-1 bg-primary rounded-full" />
         </FadeInSection>
 
-        <FadeInSection className="rounded-lg border border-gray-200 overflow-hidden bg-white">
+        <FadeInSection
+          persistVisibility={true}
+          className="rounded-lg border border-gray-200 overflow-hidden bg-white"
+        >
           <div className="w-full h-[550px]">
             <iframe
               title="SCIST Calendar"

@@ -2,7 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-export default function FadeInSection({ children, className, threshold = 1 }) {
+export default function FadeInSection({
+  children,
+  className,
+  threshold = 1,
+  persistVisibility = false,
+}) {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef(null);
 
@@ -13,13 +18,17 @@ export default function FadeInSection({ children, className, threshold = 1 }) {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        setVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setVisible(true);
+        } else if (!persistVisibility) {
+          setVisible(false);
+        }
       },
       { threshold },
     );
     observer.observe(el);
     return () => observer.unobserve(el);
-  }, [threshold]);
+  }, [threshold, persistVisibility]);
 
   return (
     <div
