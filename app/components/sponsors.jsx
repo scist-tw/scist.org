@@ -45,56 +45,117 @@ export default function PartnersSection() {
           <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
         </div>
 
-        {tiers.map((tier, tIdx) => {
-          const items = Array.isArray(tier?.items)
-            ? tier.items
-            : Array.isArray(tier?.sponsors)
-              ? tier.sponsors
-              : Object.values(tier?.items || tier?.sponsors || {});
-          return (
-            <div key={tIdx} className="mb-12">
-              <h3 className="text-2xl font-bold text-foreground mb-6 text-left">
-                {tier.title ?? tier.name ?? ""}
-              </h3>
+        {error && <p className="text-center text-red-600">{error}</p>}
 
-              <div className="flex flex-wrap justify-center items-center gap-4">
-                {items.map((item, iIdx) => {
-                  const name =
-                    typeof item === "string" ? item : (item?.name ?? "");
-                  const image =
-                    typeof item === "object" ? item?.image : undefined;
-                  const website =
-                    typeof item === "object" ? item?.website : undefined;
+        {!error && (
+          <>
+            {/* Build a flat list of sponsors with tier labels */}
+            {(() => {
+              const flat = tiers.flatMap((tier) => {
+                const title = tier?.title ?? tier?.name ?? "";
+                const items = Array.isArray(tier?.items)
+                  ? tier.items
+                  : Array.isArray(tier?.sponsors)
+                    ? tier.sponsors
+                    : Object.values(tier?.items || tier?.sponsors || {});
+                return items.map((item) => ({
+                  name: typeof item === "string" ? item : (item?.name ?? ""),
+                  image: typeof item === "object" ? item?.image : undefined,
+                  website: typeof item === "object" ? item?.website : undefined,
+                  tier: title,
+                }));
+              });
 
-                  return (
-                    <div
-                      key={iIdx}
-                      className={`bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all flex-none w-1/2 sm:w-56 md:w-64${website ? " cursor-pointer" : ""}`}
-                      onClick={() => {
-                        if (website)
-                          window.open(website, "_blank", "noopener,noreferrer");
-                      }}
-                    >
-                      {image && (
-                        <Image
-                          src={`/data/sponsors/${image}`}
-                          alt={name}
-                          width={70}
-                          height={70}
-                          className="w-full h-28 sm:h-32 object-contain rounded-md mb-4 bg-white"
-                        />
-                      )}
-                      <p className="text-sm font-medium text-gray-500 text-center">
-                        {name}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+              if (loading) {
+                return (
+                  <div className="text-center text-gray-500">
+                    Loading sponsors…
+                  </div>
+                );
+              }
+
+              if (!flat.length) {
+                return (
+                  <div className="text-center text-gray-500">
+                    No sponsors found.
+                  </div>
+                );
+              }
+
+              // Duplicate the list to create a seamless marquee loop
+              const looped = [...flat, ...flat];
+
+              return (
+                <div className="marquee">
+                  <div className="marquee__track">
+                    {looped.map((s, idx) => (
+                      <div
+                        key={`${s.name}-${idx}`}
+                        className={`bg-white border border-gray-200 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
+                        onClick={() => {
+                          if (s.website)
+                            window.open(
+                              s.website,
+                              "_blank",
+                              "noopener,noreferrer",
+                            );
+                        }}
+                      >
+                        <div>
+                          {s.image && (
+                            <Image
+                              src={`/data/sponsors/${s.image}`}
+                              alt={s.name}
+                              width={96}
+                              height={96}
+                              className="w-full h-20 sm:h-24 object-contain rounded-md bg-white"
+                              priority={idx < 8}
+                            />
+                          )}
+                        </div>
+                        <div className="flex-1 flex flex-col items-center justify-center">
+                          <p className="text-sm text-center font-semibold text-gray-700">
+                            {s.name}
+                          </p>
+                          <p className="text-xs text-gray-500">{s.tier}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+          </>
+        )}
       </div>
+
+      {/* Component-scoped styles for the marquee */}
+      <style jsx>{`
+        .marquee {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+        }
+        .marquee__track {
+          display: flex;
+          gap: 1rem;
+          align-items: stretch;
+          width: max-content;
+          animation: marquee-scroll 35s linear infinite;
+        }
+        @keyframes marquee-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        /* Optional: pause on hover */
+        .marquee:hover .marquee__track {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 }
