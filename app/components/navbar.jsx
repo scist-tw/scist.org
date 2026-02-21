@@ -40,9 +40,6 @@ export default function Navbar() {
           bg-white/95 backdrop-blur-sm border-b md:border border-gray-200
           [transition-property:all,border-radius]
         `}
-        // style={{
-        //   borderRadius: isScrolled ? "9999px" : "0px",
-        // }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">

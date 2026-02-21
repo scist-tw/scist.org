@@ -92,7 +92,7 @@ export default function Hero() {
               <a
                 key={i}
                 href={link.url}
-                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm transition-transform duration-200 hover:scale-115"
+                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm transition-transform duration-180 hover:scale-120"
               >
                 <Link2 className="w-4 h-4" aria-hidden="true" />
                 {link.title}

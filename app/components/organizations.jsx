@@ -49,7 +49,7 @@ export default function OrganizationsSection() {
           {regions.map((region) => (
             <div key={region.name} className="flex flex-col">
               <FadeInSection>
-                <h3 className="text-3xl font-bold text-primary mb-6">
+                <h3 className="text-2xl font-bold text-primary mb-6">
                   {region.name}
                 </h3>
               </FadeInSection>
