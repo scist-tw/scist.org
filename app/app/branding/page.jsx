@@ -99,8 +99,8 @@ export default function BrandAssetsPage() {
                   {asset.downloads.map((d, i) => (
                     <Button key={i} asChild className="text-white">
                       <a
-                        href={d.href}
-                        download
+                        href={`/data/branding/${d.href}`}
+                        // download
                         className="inline-flex items-center gap-2"
                       >
                         <Download className="h-4 w-4" aria-hidden="true" />

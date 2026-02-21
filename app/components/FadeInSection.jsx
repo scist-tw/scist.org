@@ -6,7 +6,7 @@ export default function FadeInSection({
   children,
   className,
   threshold = 1,
-  persistVisibility = false,
+  persistVisibility = true,
 }) {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef(null);

@@ -13,6 +13,7 @@ export default function CalendarSection() {
         </FadeInSection>
 
         <FadeInSection
+          threshold={0.1}
           persistVisibility={true}
           className="rounded-lg border border-gray-200 overflow-hidden bg-white"
         >

@@ -3,8 +3,8 @@
     "title": "SCIST Logo (深色)",
     "preview": "/SCIST_light_text.svg",
     "downloads": [
-      { "label": "PNG", "href": "/SCIST_light.png" },
-      { "label": "SVG", "href": "/SCIST_light.svg" },
+      { "label": "PNG", "href": "/SCIST_dark.png" },
+      { "label": "SVG", "href": "/SCIST_dark.svg" },
       { "label": "SVG (透明背景)", "href": "/SCIST_light_text.svg" }
     ],
     "dark": true
@@ -13,8 +13,8 @@
     "title": "SCIST Logo (亮色)",
     "preview": "/SCIST_dark_text.svg",
     "downloads": [
-      { "label": "PNG", "href": "/SCIST_dark.png" },
-      { "label": "SVG", "href": "/SCIST_dark.svg" },
+      { "label": "PNG", "href": "/SCIST_light.png" },
+      { "label": "SVG", "href": "/SCIST_light.svg" },
       { "label": "SVG (透明背景)", "href": "/SCIST_dark_text.svg" }
     ],
     "dark": false
