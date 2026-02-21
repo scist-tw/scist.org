@@ -47,7 +47,7 @@ export default function Hero() {
           <img
             src="/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"
             alt="SCIST Logo"
-            className="h-40 pl-11 w-auto bg-white px-8 py-5 rounded-3xl"
+            className="h-40 pl-10 w-auto bg-white px-8 py-5 rounded-3xl"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
