@@ -1,6 +1,6 @@
-'use client'
-import { useEffect, useState } from 'react';
-import { Link2 } from 'lucide-react'; // add icon import
+"use client";
+import { useEffect, useState } from "react";
+import { Link2 } from "lucide-react"; // add icon import
 
 export default function Hero() {
   const [links, setLinks] = useState([]);
@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center pt-16"
       style={{
-        backgroundImage: "url('/hero.webp')"
+        backgroundImage: "url('/hero.webp')",
       }}
     >
       {/* Overlay with background blur */}
@@ -47,7 +47,7 @@ export default function Hero() {
           <img
             src="/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"
             alt="SCIST Logo"
-            className="h-40 w-auto bg-white px-8 py-5 rounded-3xl"
+            className="h-40 pl-11 w-auto bg-white px-8 py-5 rounded-3xl"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
@@ -63,7 +63,10 @@ export default function Hero() {
         <div className="absolute bottom-6 left-0 right-0 z-10">
           <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4">
             {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm">
+              <div
+                key={i}
+                className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm"
+              >
                 Loading...
               </div>
             ))}
@@ -73,7 +76,10 @@ export default function Hero() {
         <div className="absolute bottom-6 left-0 right-0 z-10">
           <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4">
             {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm">
+              <div
+                key={i}
+                className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm"
+              >
                 {error}
               </div>
             ))}
