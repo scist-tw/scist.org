@@ -104,6 +104,21 @@ export default function ActivitiesSection() {
             <ActivityCard key={idx} activity={activity} index={idx} />
           ))}
         </div>
+
+        {/* <div className="mt-20 text-center">
+          <a
+            href="https://www.youtube.com/@scist-tw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/youtube.png"
+              alt="Visit our YouTube channel"
+              className="mx-auto cursor-pointer hover:opacity-80 transition-opacity max-w-full"
+              style={{ width: "900px" }}
+            />
+          </a>
+        </div> */}
       </div>
     </section>
   );

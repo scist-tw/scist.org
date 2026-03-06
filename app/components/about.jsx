@@ -34,9 +34,19 @@ export default function AboutSection() {
               />
             </div>
             <a
+              key={"workers"}
+              href={"/workers"}
+              className="inline-flex items-center gap-2 text-sm font-bold md:text-xl text-black max-w-2xl mx-auto hover:text-primary"
+              target={"_blank"}
+              rel={"noopener noreferrer"}
+            >
+              工人名單
+              <ExternalLink />
+            </a>
+            <a
               key={"branding"}
               href={"/branding"}
-              className="inline-flex items-center gap-2 text-sm font-bold md:text-xl text-black max-w-2xl mx-auto hover:text-primary"
+              className="inline-flex ml-8 items-center gap-2 text-sm font-bold md:text-xl text-black max-w-2xl mx-auto hover:text-primary"
               target={"_blank"}
               rel={"noopener noreferrer"}
             >
