@@ -18,6 +18,12 @@
     "ariaLabel": "Join SCIST Discord"
   },
   {
+    "icon": "FaYoutube",
+    "label": "Youtube",
+    "href": "https://www.youtube.com/@scist-tw",
+    "ariaLabel": "Visit SCIST Youtube"
+  },
+  {
     "icon": "Mail",
     "label": "Email",
     "href": "mailto:official@scist.org",
