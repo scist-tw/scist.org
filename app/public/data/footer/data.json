@@ -1,8 +1,1 @@
-[
-  { "title": "Branding", "url": "/branding", "newTab": false },
-  {
-    "title": "Youtube",
-    "url": "https://www.youtube.com/@scist-tw",
-    "newTab": true
-  }
-]
+[{ "title": "Branding", "url": "/branding", "newTab": false }]

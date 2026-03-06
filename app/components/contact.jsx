@@ -2,11 +2,12 @@
 
 import { Facebook, Instagram, Mail, BookOpen } from "lucide-react";
 import { SiDiscord } from "react-icons/si";
+import { FaYoutube } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Footer from "./footer";
 
 export default function ContactSection() {
-  const ICONS = { Facebook, Instagram, Mail, BookOpen, SiDiscord };
+  const ICONS = { Facebook, Instagram, Mail, BookOpen, SiDiscord, FaYoutube };
 
   const [contactLinks, setContactLinks] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -7,6 +7,7 @@ import OrganizationsSection from "@/components/organizations";
 import PartnersSection from "@/components/sponsors";
 import ContactSection from "@/components/contact";
 import ScrollTop from "@/components/scrollTop";
+import HackmdSection from "@/components/hackmd";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutSection />
+      <HackmdSection />
       <ActivitiesSection />
       <CalendarSection />
       <OrganizationsSection />
