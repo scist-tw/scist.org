@@ -44,16 +44,26 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white">
         <div className="flex justify-center mb-6">
-          <img
+          {/* <img
             src="/SCIST%20Logo/白字.svg"
             alt="SCIST Logo"
             className="h-40 pl-10 w-auto bg-black px-8 py-5 rounded-3xl"
-          />
+          /> */}
+          <div className="relative inline-flex">
+            <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle,rgba(0,0,0,1)_40%,rgba(0,0,0,0)_100%)]" />
+            <img
+              src="/SCIST%20Logo/白字.svg"
+              alt="SCIST Logo"
+              className="relative h-40 w-auto px-8 py-5 pl-10"
+            />
+          </div>
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+        {/* <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance"> */}
+        <h1 className="text-[clamp(2rem,6vw,4.5rem)] font-bold mb-0 text-white">
           南臺灣學生資訊社群
         </h1>
-        <p className="text-lg font-bold md:text-xl text-white max-w-2xl mx-auto">
+        {/* <p className="text-lg font-bold md:text-xl text-white max-w-2xl mx-auto"> */}
+        <p className="text-[clamp(1rem,2vw,1.25rem)] font-bold md:text-xl text-white max-w-[85%] mx-auto">
           Students' Community of Information in Southern Taiwan
         </p>
       </div>
