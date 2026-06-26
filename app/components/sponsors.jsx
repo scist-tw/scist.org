@@ -9,6 +9,14 @@ export default function PartnersSection() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const getTierLabelClassName = (tier) => {
+    if (tier === "鑽石級贊助單位") return "tier-label shine";
+    if (tier === "白金級贊助單位") return "tier-label chrome";
+    if (tier === "黃金級贊助單位") return "tier-label tier-label--gold";
+    if (tier === "協辦單位" || tier === "特別感謝") return "text-white/60";
+    return "text-white";
+  };
+
   useEffect(() => {
     let active = true;
     fetch("/data/sponsors/data.json")
@@ -121,7 +129,11 @@ export default function PartnersSection() {
                             <p className="text-sm text-center font-semibold text-white">
                               {s.name}
                             </p>
-                            <p className="text-xs text-white mt-1">{s.tier}</p>
+                            <p
+                              className={`mt-1 text-xs ${getTierLabelClassName(s.tier)}`}
+                            >
+                              {s.tier}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -159,6 +171,101 @@ export default function PartnersSection() {
         /* Optional: pause on hover */
         .marquee:hover .marquee__track {
           animation-play-state: paused;
+        }
+
+        .tier-label {
+          display: inline-block;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+        }
+
+        .shine,
+        .chrome {
+          background: #222 -webkit-gradient(
+              linear,
+              left top,
+              right top,
+              from(#222),
+              to(#222),
+              color-stop(0.5, #fff)
+            )
+            0 0 no-repeat;
+          color: rgba(255, 255, 255, 0.3);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          text-shadow: 0 0 0 rgba(255, 255, 255, 0.5);
+        }
+
+        .shine {
+          -webkit-background-size: 150px;
+          background-size: 150px;
+          -webkit-animation-name: shine;
+          -webkit-animation-duration: 5s;
+          animation-name: shine;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          text-shadow: 0 0 0 rgba(255, 255, 255, 0.5);
+        }
+
+        .chrome {
+          background-image: -webkit-linear-gradient(
+            -40deg,
+            transparent 0%,
+            transparent 40%,
+            #fff 50%,
+            transparent 60%,
+            transparent 100%
+          );
+          -webkit-background-size: 200px;
+          background-size: 200px;
+          -webkit-animation-name: shine;
+          -webkit-animation-duration: 5s;
+          animation-name: shine;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          text-shadow: 0 0 0 rgba(255, 255, 255, 0.5);
+        }
+
+        .tier-label--gold {
+          color: #d6a93a;
+        }
+
+        @-webkit-keyframes shine {
+          0% {
+            background-position: -1000px;
+          }
+          10% {
+            background-position: -1000px;
+          }
+          20% {
+            background-position: top left;
+          }
+          90% {
+            background-position: top right;
+          }
+          100% {
+            background-position: 1000px;
+          }
+        }
+
+        @keyframes shine {
+          0% {
+            background-position: -1000px;
+          }
+          10% {
+            background-position: -1000px;
+          }
+          20% {
+            background-position: top left;
+          }
+          90% {
+            background-position: top right;
+          }
+          100% {
+            background-position: 1000px;
+          }
         }
       `}</style>
     </section>
