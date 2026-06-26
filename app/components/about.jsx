@@ -3,7 +3,7 @@ import FadeInSection from "./FadeInSection";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-primary">
+    <section id="about" className="py-20 bg-[#107ac5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-12">
           <h2 className="text-4xl font-bold text-white mb-4 text-balance">
@@ -39,7 +39,7 @@ export default function AboutSection() {
             <a
               key={"workers"}
               href={"/workers"}
-              className="inline-flex items-center gap-2 text-sm font-bold md:text-xl text-black max-w-2xl mx-auto hover:opacity-65 transition-opacity"
+              className="inline-flex items-center gap-2 text-sm font-bold md:text-xl text-white max-w-2xl mx-auto hover:opacity-65 transition-opacity"
               target={"_blank"}
               rel={"noopener noreferrer"}
             >
@@ -49,7 +49,7 @@ export default function AboutSection() {
             <a
               key={"branding"}
               href={"/branding"}
-              className="inline-flex ml-8 items-center gap-2 text-sm font-bold md:text-xl text-black max-w-2xl mx-auto hover:opacity-65 transition-opacity"
+              className="inline-flex ml-8 items-center gap-2 text-sm font-bold md:text-xl text-white max-w-2xl mx-auto hover:opacity-65 transition-opacity"
               target={"_blank"}
               rel={"noopener noreferrer"}
             >
