@@ -35,7 +35,8 @@ export default function Navbar() {
           ${
             isScrolled
               ? "md:max-w-6xl md:mx-auto md:mt-4 md:shadow-lg md:rounded-2xl"
-              : "w-full"
+              : // : "w-full"
+                "md:max-w-full md:mx-auto md:mt-0 rounded-none"
           }
           bg-(--background-temp) backdrop-blur-sm border-b md:border border-transparent
           [transition-property:all,border-radius]

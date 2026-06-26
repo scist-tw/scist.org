@@ -10,7 +10,7 @@ export default function AboutSection() {
             {/* text-foreground */}
             &lt;關於我們/&gt;
           </h2>
-          <div className="w-20 h-1 bg-white rounded-full" />
+          <div className="w-20 h-1 bg-primary rounded-full" />
         </FadeInSection>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <FadeInSection>
