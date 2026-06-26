@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Link2 } from "lucide-react"; // add icon import
+import { Link2 } from "lucide-react";
 
 export default function Hero() {
   const [links, setLinks] = useState([]);
@@ -45,9 +45,9 @@ export default function Hero() {
       <div className="relative z-10 text-center text-white">
         <div className="flex justify-center mb-6">
           <img
-            src="/SCIST%20Logo/%E9%BB%91%E5%AD%97.svg"
+            src="/SCIST%20Logo/白字.svg"
             alt="SCIST Logo"
-            className="h-40 pl-10 w-auto bg-white px-8 py-5 rounded-3xl"
+            className="h-40 pl-10 w-auto bg-black px-8 py-5 rounded-3xl"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
@@ -60,21 +60,21 @@ export default function Hero() {
 
       {/* Bottom links */}
       {loading ? (
-        <div className="absolute bottom-6 left-0 right-0 z-10">
-          <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4">
-            {Array.from({ length: 4 }).map((_, i) => (
+        <div className="absolute bottom-10 left-0 right-0 z-10">
+          <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4 text-center">
+            {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
                 className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm"
               >
-                Loading...
+                Loading
               </div>
             ))}
           </div>
         </div>
       ) : error ? (
-        <div className="absolute bottom-6 left-0 right-0 z-10">
-          <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4">
+        <div className="absolute bottom-10 left-0 right-0 z-10">
+          <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4 text-center">
             {Array.from({ length: 4 }).map((_, i) => (
               <div
                 key={i}
@@ -86,13 +86,14 @@ export default function Hero() {
           </div>
         </div>
       ) : (
-        <div className="absolute bottom-14 left-0 right-0 z-10">
-          <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4">
+        <div className="absolute bottom-10 left-0 right-0 z-10 mr-5">
+          <div className="mx-auto max-w-4xl flex flex-wrap justify-center gap-4 text-center">
             {links.map((link, i) => (
               <a
                 key={i}
                 href={link.url}
-                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm transition-transform duration-180 hover:scale-120"
+                target="_blank"
+                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm transition-transform duration-180 hover:scale-115 shrink-0"
               >
                 <Link2 className="w-4 h-4" aria-hidden="true" />
                 {link.title}

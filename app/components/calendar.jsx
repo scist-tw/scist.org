@@ -3,10 +3,10 @@ import FadeInSection from "./FadeInSection";
 
 export default function CalendarSection() {
   return (
-    <section id="calendar" className="py-20 bg-white">
+    <section id="calendar" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="text-4xl font-bold text-white mb-4 text-balance">
             公開日曆
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />

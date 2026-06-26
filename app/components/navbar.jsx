@@ -34,10 +34,10 @@ export default function Navbar() {
           rounded-b-2xl
           ${
             isScrolled
-              ? "md:max-w-6xl md:mx-auto md:mt-4 md:shadow-lg rounded-2xl"
+              ? "md:max-w-6xl md:mx-auto md:mt-4 md:shadow-lg md:rounded-2xl"
               : "w-full"
           }
-          bg-white/95 backdrop-blur-sm border-b md:border border-gray-200
+          bg-black backdrop-blur-sm border-b md:border border-black
           [transition-property:all,border-radius]
         `}
       >
@@ -49,9 +49,9 @@ export default function Navbar() {
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <img
-                src="/index.webp"
+                src="/SCIST Logo/白字去背.png"
                 alt="SCIST Logo"
-                className="h-6 w-auto"
+                className="h-30 w-auto"
                 fetchPriority="high"
               />
             </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   target={item.target ? item.target : "_self"}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
+                  className="text-white hover:text-white hover:opacity-80 transition-opacity font-medium"
                 >
                   {item.label}
                 </a>
@@ -73,7 +73,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 cursor-pointer"
+              className="md:hidden p-2 cursor-pointer text-white"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -81,12 +81,12 @@ export default function Navbar() {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div className="md:hidden pb-4 border-t">
+            <div className="md:hidden pb-4 border-t pt-2">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block px-4 py-2 text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                  className="block px-4 py-2 text-white hover:opacity-80 transition-opacity"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

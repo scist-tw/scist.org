@@ -36,10 +36,10 @@ export default function OrganizationsSection() {
   }, []);
 
   return (
-    <section id="organizations" className="py-20 bg-gray-50">
+    <section id="organizations" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="text-4xl font-bold text-white mb-4 text-balance">
             參與學校
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
@@ -60,7 +60,7 @@ export default function OrganizationsSection() {
                       <div className="group perspective-[1000px] h-28">
                         <div className="cursor-pointer relative h-full w-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                           {/* Front */}
-                          <div className="absolute inset-0 bg-white rounded-3xl overflow-hidden p-4 flex gap-4 items-center backface-hidden">
+                          <div className="absolute inset-0 bg-black border-3 border-white/10 rounded-3xl overflow-hidden p-4 flex gap-4 items-center backface-hidden">
                             <div className="shrink-0">
                               <Image
                                 src={`/data/organizations/${club.image}`}
@@ -71,7 +71,7 @@ export default function OrganizationsSection() {
                               />
                             </div>
                             <div className="grow min-w-0">
-                              <h4 className="font-bold text-foreground text-lg mb-1 truncate">
+                              <h4 className="font-bold text-white text-lg mb-1 truncate">
                                 {club.school}
                               </h4>
                               <p className="text-md font-bold text-muted-foreground mb-1 truncate">

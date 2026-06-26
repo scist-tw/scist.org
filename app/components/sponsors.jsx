@@ -38,10 +38,10 @@ export default function PartnersSection() {
   }, []);
 
   return (
-    <section id="partners" className="py-20 bg-white">
+    <section id="partners" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-4">合作夥伴</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">合作夥伴</h2>
           <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
         </div>
 
@@ -91,7 +91,7 @@ export default function PartnersSection() {
                     {looped.map((s, idx) => (
                       <div
                         key={`${s.name}-${idx}`}
-                        className={`bg-white border border-gray-200 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
+                        className={`bg-black border-3 border-white/10 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
                         onClick={() => {
                           if (s.website)
                             window.open(
@@ -113,11 +113,11 @@ export default function PartnersSection() {
                             />
                           )}
                         </div>
-                        <div className="flex-1 flex flex-col items-center justify-center">
-                          <p className="text-sm text-center font-semibold text-gray-700">
+                        <div className="flex-1 flex flex-col items-center justify-center mt-1">
+                          <p className="text-sm text-center font-semibold text-white">
                             {s.name}
                           </p>
-                          <p className="text-xs text-gray-500">{s.tier}</p>
+                          <p className="text-xs text-white mt-1">{s.tier}</p>
                         </div>
                       </div>
                     ))}

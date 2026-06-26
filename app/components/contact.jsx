@@ -44,14 +44,14 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4 text-balance">
+        {/* <div className="mb-12"> */}
+        {/* <h2 className="text-3xl font-bold text-foreground mb-4 text-balance">
             聯絡資訊
-          </h2>
-          <div className="w-20 h-1 bg-primary rounded-full" />
-        </div>
+          </h2> */}
+        {/* <div className="w-20 h-1 bg-primary rounded-full" /> */}
+        {/* </div> */}
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
           {contactLinks.map((link) => {
@@ -63,10 +63,10 @@ export default function ContactSection() {
                 aria-label={link.ariaLabel}
                 className="flex flex-col items-center gap-3 group"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-all duration-1000">
                   <IconComponent className="w-8 h-8 text-primary" />
                 </div>
-                <p className="text-foreground group-hover:text-primary transition-colors font-bold">
+                <p className="text-white/50 group-hover:text-primary transition-colors font-bold">
                   {link.label}
                 </p>
               </a>

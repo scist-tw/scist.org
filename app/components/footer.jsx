@@ -1,5 +1,6 @@
 "use client";
 
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -46,7 +47,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="border-t border-primary/10 mt-20 py-6 bg-background">
+    <footer className="border-t border-white/15 mt-20 py-6 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {!footerLoading && !footerError && (
           <nav
@@ -57,16 +58,17 @@ export default function Footer() {
               <a
                 key={link.title}
                 href={link.url}
-                className="text-base font-bold md:text-lg text-foreground/80 hover:text-primary transition-colors"
+                className="inline-flex items-center gap-1 text-base font-bold md:text-lg text-muted hover:opacity-65 transition-opacity"
                 target={link.newTab ? "_blank" : undefined}
                 rel={link.newTab ? "noopener noreferrer" : undefined}
               >
                 {link.title}
+                <ExternalLink className="h-4 w-4" />
               </a>
             ))}
           </nav>
         )}
-        <p className="text-center text-foreground/60 text-sm">
+        <p className="text-center text-white text-sm">
           Copyright © {new Date().getFullYear()} SCIST. All rights reserved.
         </p>
       </div>

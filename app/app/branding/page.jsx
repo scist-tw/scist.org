@@ -57,16 +57,14 @@ export default function BrandAssetsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <Navbar />
       <section className="pt-26 lg:px-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
-              我們的 Logo
-            </h1>
+            <h1 className="text-4xl font-bold text-white mb-4">我們的 Logo</h1>
             <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
-            <p className="text-muted-foreground mt-4">
+            <p className="text-muted mt-4">
               SCIST 的 Logo 提供亮色及暗色版本的 Logo 下載使用。
             </p>
           </div>
@@ -112,7 +110,7 @@ export default function BrandAssetsPage() {
               </article>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground mt-3">
+          <p className="text-xs text-muted mt-3">
             請遵守我們的使用規範，在任何情況下，都請不要針對 Logo
             本身進行任何變形、重製、換色、或套用特殊效果。
           </p>
@@ -122,7 +120,7 @@ export default function BrandAssetsPage() {
       <section className="pt-10 pb-16 lg:px-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-foreground mb-4">書寫方式</h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted">
             SCIST 的英文全稱為「Students' Community of Information in Southern
             Taiwan」，當在純文字下使用簡稱提及 SCIST
             時，五個字母請全大寫；若版面許可，也可以使用全稱「SCIST

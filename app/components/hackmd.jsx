@@ -25,11 +25,11 @@ export default function HackmdSection() {
   }, [isExpanded]);
 
   return (
-    <section id="hackmd" className="py-20 bg-white">
+    <section id="hackmd" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <button
           type="button"
-          className="relative block w-full h-[550px] cursor-pointer overflow-hidden rounded-xl border border-slate-200 shadow-sm transition hover:shadow-md"
+          className="relative block w-full h-[550px] cursor-pointer overflow-hidden rounded-xl shadow-sm transition hover:shadow-md"
           onClick={() => setIsExpanded(true)}
           aria-label="Expand calendar"
         >
@@ -59,7 +59,7 @@ export default function HackmdSection() {
           aria-label="Expanded calendar"
         >
           <div
-            className="relative mx-auto h-full w-full max-w-6xl overflow-auto rounded-xl bg-white shadow-2xl"
+            className="relative mx-auto h-full w-full max-w-6xl overflow-auto rounded-xl bg-black shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
             <button

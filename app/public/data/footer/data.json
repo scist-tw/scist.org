@@ -1,1 +1,28 @@
-[{ "title": "Branding", "url": "/branding", "newTab": false }]
+[
+  { "title": "Branding", "url": "/branding", "newTab": false },
+  {
+    "title": "報名 S6 培訓學員",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLScglL3kmt5Yr3-rP3hVo0jLUs_uxrygLdgMAaendiBID5SX5A/viewform?usp=sharing&ouid=113378046690930000668",
+    "newTab": true
+  },
+  {
+    "title": "S5年刊",
+    "url": "https://heyzine.com/flip-book/cecead6d93.html",
+    "newTab": true
+  },
+  {
+    "title": "S4年刊",
+    "url": "https://online.visual-paradigm.com/share/book/scist-v5-1v8lv4rgg4",
+    "newTab": true
+  },
+  {
+    "title": "S3年刊",
+    "url": "https://online.visual-paradigm.com/share/book/--1i0so5tdwl",
+    "newTab": true
+  },
+  {
+    "title": "S2年刊",
+    "url": "https://online.visual-paradigm.com/share/book/1-1--12019v5022",
+    "newTab": true
+  }
+]

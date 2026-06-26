@@ -59,7 +59,7 @@ export default function ActivitiesSection() {
       <div
         ref={cardRef}
         className={
-          "bg-white p-8 rounded-lg w-100 transition-all duration-700 ease-out will-change-transform"
+          "bg-black p-8 rounded-lg w-100 transition-all border-3 border-white/10 duration-700 ease-out will-change-transform"
         }
         style={{
           transform: visible ? visibleTransform : hiddenTransform,
@@ -67,33 +67,31 @@ export default function ActivitiesSection() {
           transitionDelay: `${Math.min(index * 120, 480)}ms`,
         }}
       >
-        <h3 className="text-xl font-bold text-primary mb-2">
-          {activity.title}
-        </h3>
+        <h3 className="text-xl font-bold text-muted mb-2">{activity.title}</h3>
         {/* {activity.description && (
           <p className="text-foreground/70 mb-4">{activity.description}</p>
         )} */}
         {contentItems.length > 0 ? (
-          <ul className="list-disc list-inside space-y-1 text-foreground/80">
+          <ul className="list-disc list-inside space-y-1 text-muted">
             {contentItems.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
         ) : (
-          <p className="text-foreground/50 italic">尚未提供內容</p>
+          <p className="text-muted italic">尚未提供內容</p>
         )}
         <div className="mt-6 pt-4 border-t border-gray-200">
-          <p className="text-foreground text-sm">{activity.goal}</p>
+          <p className="text-muted text-sm">{activity.goal}</p>
         </div>
       </div>
     );
   };
 
   return (
-    <section id="activities" className="py-20 bg-gray-50">
+    <section id="activities" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="text-4xl font-bold text-white mb-4 text-balance">
             課程內容
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
@@ -104,21 +102,6 @@ export default function ActivitiesSection() {
             <ActivityCard key={idx} activity={activity} index={idx} />
           ))}
         </div>
-
-        {/* <div className="mt-20 text-center">
-          <a
-            href="https://www.youtube.com/@scist-tw"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/youtube.png"
-              alt="Visit our YouTube channel"
-              className="mx-auto cursor-pointer hover:opacity-80 transition-opacity max-w-full"
-              style={{ width: "900px" }}
-            />
-          </a>
-        </div> */}
       </div>
     </section>
   );
