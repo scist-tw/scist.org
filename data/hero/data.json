@@ -1,8 +1,11 @@
 [
-  { "title": "報名 S6 培訓學員", "url": "https://docs.google.com/forms/d/e/1FAIpQLScglL3kmt5Yr3-rP3hVo0jLUs_uxrygLdgMAaendiBID5SX5A/viewform?usp=sharing&ouid=113378046690930000668" },
-  { "title": "加入 Discord 伺服器", "url": "https://discord.com/invite/Ff6xZXNQq9" },
-  { "title": "S5年刊", "url": "https://heyzine.com/flip-book/cecead6d93.html" },
-  { "title": "S4年刊", "url": "https://online.visual-paradigm.com/share/book/scist-v5-1v8lv4rgg4" },
-  { "title": "S3年刊", "url": "https://online.visual-paradigm.com/share/book/--1i0so5tdwl" },
-  { "title": "S2年刊", "url": "https://online.visual-paradigm.com/share/book/1-1--12019v5022" }
+  {
+    "title": "報名 S6 培訓學員",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLScglL3kmt5Yr3-rP3hVo0jLUs_uxrygLdgMAaendiBID5SX5A/viewform?usp=sharing&ouid=113378046690930000668"
+  },
+  {
+    "title": "加入 Discord 伺服器",
+    "url": "https://discord.com/invite/Ff6xZXNQq9"
+  },
+  { "title": "S5年刊", "url": "https://heyzine.com/flip-book/cecead6d93.html" }
 ]
