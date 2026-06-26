@@ -49,9 +49,9 @@ export default function Navbar() {
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <img
-                src="/SCIST Logo/白字去背.png"
+                src="/SCIST Logo/_.png"
                 alt="SCIST Logo"
-                className="h-30 w-auto"
+                className="h-10 w-auto"
                 fetchPriority="high"
               />
             </a>

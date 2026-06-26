@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import FadeInSection from "./FadeInSection";
 
 export default function PartnersSection() {
   const [tiers, setTiers] = useState([]);
@@ -86,43 +87,45 @@ export default function PartnersSection() {
               const looped = [...flat, ...flat];
 
               return (
-                <div className="marquee">
-                  <div className="marquee__track">
-                    {looped.map((s, idx) => (
-                      <div
-                        key={`${s.name}-${idx}`}
-                        className={`bg-black border-3 border-white/10 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
-                        onClick={() => {
-                          if (s.website)
-                            window.open(
-                              s.website,
-                              "_blank",
-                              "noopener,noreferrer",
-                            );
-                        }}
-                      >
-                        <div>
-                          {s.image && (
-                            <Image
-                              src={`/data/sponsors/${s.image}`}
-                              alt={s.name}
-                              width={96}
-                              height={96}
-                              className="w-full h-20 sm:h-24 object-contain rounded-md bg-white"
-                              priority={idx < 8}
-                            />
-                          )}
+                <FadeInSection>
+                  <div className="marquee">
+                    <div className="marquee__track">
+                      {looped.map((s, idx) => (
+                        <div
+                          key={`${s.name}-${idx}`}
+                          className={`bg-black border-3 border-white/10 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
+                          onClick={() => {
+                            if (s.website)
+                              window.open(
+                                s.website,
+                                "_blank",
+                                "noopener,noreferrer",
+                              );
+                          }}
+                        >
+                          <div>
+                            {s.image && (
+                              <Image
+                                src={`/data/sponsors/${s.image}`}
+                                alt={s.name}
+                                width={96}
+                                height={96}
+                                className="w-full h-20 sm:h-24 object-contain rounded-md bg-white"
+                                priority={idx < 8}
+                              />
+                            )}
+                          </div>
+                          <div className="flex-1 flex flex-col items-center justify-center mt-1">
+                            <p className="text-sm text-center font-semibold text-white">
+                              {s.name}
+                            </p>
+                            <p className="text-xs text-white mt-1">{s.tier}</p>
+                          </div>
                         </div>
-                        <div className="flex-1 flex flex-col items-center justify-center mt-1">
-                          <p className="text-sm text-center font-semibold text-white">
-                            {s.name}
-                          </p>
-                          <p className="text-xs text-white mt-1">{s.tier}</p>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </FadeInSection>
               );
             })()}
           </>
