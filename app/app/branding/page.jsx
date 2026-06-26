@@ -73,9 +73,9 @@ export default function BrandAssetsPage() {
             {assets.map((asset, idx) => (
               <article
                 key={idx}
-                className="rounded-xl border border-gray-200 overflow-hidden bg-white"
+                className="rounded-xl border-white/10 border-3 bg-black overflow-hidden"
               >
-                <header className="px-5 py-3 font-semibold border-b border-gray-100">
+                <header className="text-muted px-5 py-3 font-semibold">
                   {asset.title}
                 </header>
 
@@ -93,7 +93,7 @@ export default function BrandAssetsPage() {
                   />
                 </div>
 
-                <div className="px-5 py-4 border-t border-gray-100 flex flex-wrap gap-3">
+                <div className="px-5 py-4 flex flex-wrap gap-3">
                   {asset.downloads.map((d, i) => (
                     <Button key={i} asChild className="text-white">
                       <a
@@ -110,16 +110,16 @@ export default function BrandAssetsPage() {
               </article>
             ))}
           </div>
-          <p className="text-xs text-muted mt-3">
+          <p className="text-xs text-center text-white/40 mt-3">
             請遵守我們的使用規範，在任何情況下，都請不要針對 Logo
             本身進行任何變形、重製、換色、或套用特殊效果。
           </p>
         </div>
       </section>
 
-      <section className="pt-10 pb-16 lg:px-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-foreground mb-4">書寫方式</h1>
+      <section className="pt-10 lg:px-30 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-muted mb-4">書寫方式</h1>
           <p className="text-muted">
             SCIST 的英文全稱為「Students' Community of Information in Southern
             Taiwan」，當在純文字下使用簡稱提及 SCIST

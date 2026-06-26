@@ -58,7 +58,7 @@ export default function Footer() {
               <a
                 key={link.title}
                 href={link.url}
-                className="inline-flex items-center gap-1 text-base font-bold md:text-lg text-muted hover:opacity-65 transition-opacity"
+                className="text-white/50 inline-flex items-center gap-1 text-base font-bold md:text-lg hover:opacity-65 transition-opacity"
                 target={link.newTab ? "_blank" : undefined}
                 rel={link.newTab ? "noopener noreferrer" : undefined}
               >
@@ -68,7 +68,7 @@ export default function Footer() {
             ))}
           </nav>
         )}
-        <p className="text-center text-white text-sm">
+        <p className="text-center text-white/40 text-sm">
           Copyright © {new Date().getFullYear()} SCIST. All rights reserved.
         </p>
       </div>

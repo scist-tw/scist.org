@@ -91,10 +91,12 @@ export default function ActivitiesSection() {
     <section id="activities" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4 text-balance">
-            課程內容
-          </h2>
-          <div className="w-20 h-1 bg-primary rounded-full" />
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-4 text-balance">
+              &lt;課程內容/&gt;
+            </h2>
+            <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
+          </div>
         </div>
 
         <div className="justify-center grid gap-8 sm:grid-cols-1 lg:grid-cols-2 justify-items-center">

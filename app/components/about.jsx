@@ -8,7 +8,7 @@ export default function AboutSection() {
         <FadeInSection className="mb-12">
           <h2 className="text-4xl font-bold text-white mb-4 text-balance">
             {/* text-foreground */}
-            關於我們
+            &lt;關於我們/&gt;
           </h2>
           <div className="w-20 h-1 bg-white rounded-full" />
         </FadeInSection>

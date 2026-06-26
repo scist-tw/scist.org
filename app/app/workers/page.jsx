@@ -57,9 +57,11 @@ export default function WorkerPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="bg-white">
       <Navbar />
-      <div className="mt-50 text-center">Page under construction</div>
+      <div className="pt-50 text-black text-center min-h-[60vh]">
+        Page under construction
+      </div>
       <Footer />
     </main>
   );

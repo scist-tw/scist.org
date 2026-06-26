@@ -22,7 +22,7 @@ const ScrollTop = () => {
   };
 
   const baseClasses =
-    "fixed right-8 bottom-8 z-[1000] w-12 h-12 rounded-full flex items-center justify-center bg-white hover:bg-neutral-100 text-neutral-900 shadow-xl cursor-pointer transition-opacity transition-transform transition-colors duration-200 ease-out";
+    "active:scale-80 fixed right-8 bottom-8 z-[1000] w-12 h-12 rounded-full flex items-center justify-center bg-white hover:bg-neutral-100 text-neutral-900 shadow-xl cursor-pointer transition-opacity transition-transform transition-all duration-200 ease-out";
   const visibilityClasses = visible
     ? "opacity-100 translate-y-0 pointer-events-auto"
     : "opacity-0 translate-y-2 pointer-events-none";

@@ -39,17 +39,19 @@ export default function OrganizationsSection() {
     <section id="organizations" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4 text-balance">
-            參與學校
-          </h2>
-          <div className="w-20 h-1 bg-primary rounded-full" />
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-4 text-balance">
+              &lt;參與學校/&gt;
+            </h2>
+            <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
+          </div>
         </FadeInSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {regions.map((region) => (
             <div key={region.name} className="flex flex-col">
               <FadeInSection>
-                <h3 className="text-2xl font-bold text-primary mb-6">
+                <h3 className="text-2xl font-bold text-center text-white mb-6">
                   {region.name}
                 </h3>
               </FadeInSection>
