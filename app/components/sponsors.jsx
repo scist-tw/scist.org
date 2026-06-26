@@ -39,7 +39,7 @@ export default function PartnersSection() {
   }, []);
 
   return (
-    <section id="partners" className="py-20 bg-black">
+    <section id="partners" className="py-20 bg-(--background-temp)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -95,7 +95,7 @@ export default function PartnersSection() {
                       {looped.map((s, idx) => (
                         <div
                           key={`${s.name}-${idx}`}
-                          className={`bg-black border-3 border-white/10 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
+                          className={`bg-(--background-temp) border-3 border-white/10 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
                           onClick={() => {
                             if (s.website)
                               window.open(

@@ -47,7 +47,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="border-t border-white/15 mt-20 py-6 bg-black">
+    <footer className="border-t border-white/15 mt-20 py-6 bg-(--background-temp)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {!footerLoading && !footerError && (
           <nav

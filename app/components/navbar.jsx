@@ -37,7 +37,7 @@ export default function Navbar() {
               ? "md:max-w-6xl md:mx-auto md:mt-4 md:shadow-lg md:rounded-2xl"
               : "w-full"
           }
-          bg-black backdrop-blur-sm border-b md:border border-black
+          bg-(--background-temp) backdrop-blur-sm border-b md:border border-transparent
           [transition-property:all,border-radius]
         `}
       >
@@ -46,7 +46,7 @@ export default function Navbar() {
             {/* Logo */}
             <a
               href="/"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-2 hover:opacity-80 duration-180 hover:scale-115 transition-transform"
             >
               <img
                 src="/SCIST Logo/_.png"

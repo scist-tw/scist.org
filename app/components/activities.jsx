@@ -59,7 +59,7 @@ export default function ActivitiesSection() {
       <div
         ref={cardRef}
         className={
-          "bg-black p-8 rounded-lg w-100 transition-all border-3 border-white/10 duration-700 ease-out will-change-transform"
+          "bg-(--background-temp) p-8 rounded-lg w-100 transition-all border-3 border-white/10 duration-700 ease-out will-change-transform"
         }
         style={{
           transform: visible ? visibleTransform : hiddenTransform,
@@ -88,7 +88,7 @@ export default function ActivitiesSection() {
   };
 
   return (
-    <section id="activities" className="py-20 bg-black">
+    <section id="activities" className="py-20 bg-(--background-temp)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="text-center">

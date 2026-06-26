@@ -3,7 +3,7 @@ import FadeInSection from "./FadeInSection";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-[#107ac5]">
+    <section id="about" className="py-20 bg-(--background-temp)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-12">
           <h2 className="text-4xl font-bold text-white mb-4 text-balance">

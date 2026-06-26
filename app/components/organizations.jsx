@@ -36,7 +36,7 @@ export default function OrganizationsSection() {
   }, []);
 
   return (
-    <section id="organizations" className="py-20 bg-black">
+    <section id="organizations" className="py-20 bg-(--background-temp)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="mb-12">
           <div className="text-center">
@@ -62,7 +62,7 @@ export default function OrganizationsSection() {
                       <div className="group perspective-[1000px] h-28">
                         <div className="cursor-pointer relative h-full w-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                           {/* Front */}
-                          <div className="absolute inset-0 bg-black border-3 border-white/10 rounded-3xl overflow-hidden p-4 flex gap-4 items-center backface-hidden">
+                          <div className="absolute inset-0 bg-(--background-temp) border-3 border-white/10 rounded-3xl overflow-hidden p-4 flex gap-4 items-center backface-hidden">
                             <div className="shrink-0">
                               <Image
                                 src={`/data/organizations/${club.image}`}

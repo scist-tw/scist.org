@@ -39,7 +39,7 @@ export default function Hero() {
       }}
     >
       {/* Overlay with background blur */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-xs" />
+      <div className="absolute inset-0 bg-(--background-temp)/30 backdrop-blur-xs" />
 
       {/* Content */}
       <div className="relative z-10 text-center text-white">
@@ -47,10 +47,10 @@ export default function Hero() {
           {/* <img
             src="/SCIST%20Logo/白字.svg"
             alt="SCIST Logo"
-            className="h-40 pl-10 w-auto bg-black px-8 py-5 rounded-3xl"
+            className="h-40 pl-10 w-auto bg-(--background-temp) px-8 py-5 rounded-3xl"
           /> */}
           <div className="relative inline-flex">
-            <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle,rgba(0,0,0,1)_40%,rgba(0,0,0,0)_100%)]" />
+            <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle,rgba(255,255,255,0.3)_40%,rgba(0,0,0,0)_100%)]" />
             <img
               src="/SCIST%20Logo/白字.svg"
               alt="SCIST Logo"
@@ -75,7 +75,7 @@ export default function Hero() {
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
-                className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm"
+                className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-(--background-temp)/30 backdrop-blur-sm"
               >
                 Loading
               </div>
@@ -88,7 +88,7 @@ export default function Hero() {
             {Array.from({ length: 4 }).map((_, i) => (
               <div
                 key={i}
-                className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm"
+                className="text-white/90 hover:text-white px-3 py-1 rounded-md bg-(--background-temp)/30 backdrop-blur-sm"
               >
                 {error}
               </div>
@@ -103,7 +103,7 @@ export default function Hero() {
                 key={i}
                 href={link.url}
                 target="_blank"
-                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-black/30 backdrop-blur-sm transition-transform duration-180 hover:scale-115 shrink-0"
+                className="inline-flex items-center gap-2 text-white/90 hover:text-white px-3 py-1 rounded-md bg-(--background-temp)/30 backdrop-blur-sm transition-transform duration-180 hover:scale-115 shrink-0"
               >
                 <Link2 className="w-4 h-4" aria-hidden="true" />
                 {link.title}

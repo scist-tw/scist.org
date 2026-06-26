@@ -57,7 +57,7 @@ export default function BrandAssetsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-(--background-temp)">
       <Navbar />
       <section className="pt-26 lg:px-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ export default function BrandAssetsPage() {
             {assets.map((asset, idx) => (
               <article
                 key={idx}
-                className="rounded-xl border-white/10 border-3 bg-black overflow-hidden"
+                className="rounded-xl border-white/10 border-3 bg-(--background-temp) overflow-hidden"
               >
                 <header className="text-muted px-5 py-3 font-semibold">
                   {asset.title}

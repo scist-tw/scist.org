@@ -26,7 +26,7 @@ export default function HackmdSection() {
   }, [isExpanded]);
 
   return (
-    <section id="hackmd" className="py-20 bg-black">
+    <section id="hackmd" className="py-20 bg-(--background-temp)">
       <FadeInSection threshold={0.1} persistVisibility={true}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
@@ -61,7 +61,7 @@ export default function HackmdSection() {
             aria-label="Expanded calendar"
           >
             <div
-              className="relative mx-auto h-full w-full max-w-6xl overflow-auto rounded-xl bg-black shadow-2xl"
+              className="relative mx-auto h-full w-full max-w-6xl overflow-auto rounded-xl bg-(--background-temp) shadow-2xl"
               onClick={(event) => event.stopPropagation()}
             >
               <button
