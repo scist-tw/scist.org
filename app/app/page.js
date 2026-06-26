@@ -8,6 +8,7 @@ import PartnersSection from "@/components/sponsors";
 import ContactSection from "@/components/contact";
 import ScrollTop from "@/components/scrollTop";
 import HackmdSection from "@/components/hackmd";
+import YoutubeSection from "@/components/youtube";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <HackmdSection />
+      <YoutubeSection />
       <ActivitiesSection />
       <CalendarSection />
       <OrganizationsSection />
