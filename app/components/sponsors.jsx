@@ -103,7 +103,7 @@ export default function PartnersSection() {
                       {looped.map((s, idx) => (
                         <div
                           key={`${s.name}-${idx}`}
-                          className={`bg-(--background-temp) border-3 border-white/10 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""}`}
+                          className={`bg-(--background-temp) border-3 border-white/10 rounded-lg p-4 transition-all flex-none w-40 sm:w-48 flex flex-col${s.website ? " cursor-pointer" : ""} bg-linear-to-b from-white/15 via-white/5 to-transparent`}
                           onClick={() => {
                             if (s.website)
                               window.open(

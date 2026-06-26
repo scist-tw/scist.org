@@ -59,7 +59,7 @@ export default function ActivitiesSection() {
       <div
         ref={cardRef}
         className={
-          "bg-(--background-temp) p-8 rounded-lg w-100 transition-all border-3 border-white/10 duration-700 ease-out will-change-transform"
+          "relative overflow-hidden bg-(--background-temp) p-8 rounded-lg w-100 transition-all border-3 border-white/10 duration-700 ease-out will-change-transform"
         }
         style={{
           transform: visible ? visibleTransform : hiddenTransform,
@@ -67,6 +67,7 @@ export default function ActivitiesSection() {
           transitionDelay: `${Math.min(index * 120, 480)}ms`,
         }}
       >
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-linear-to-b from-white/20 via-white/5 to-transparent" />
         <h3 className="text-xl font-bold text-muted mb-2">{activity.title}</h3>
         {/* {activity.description && (
           <p className="text-foreground/70 mb-4">{activity.description}</p>
