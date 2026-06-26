@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
 import FadeInSection from "./FadeInSection";
 
 export default function HackmdSection() {
@@ -31,21 +31,21 @@ export default function HackmdSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             type="button"
-            className="relative block w-full h-[550px] cursor-pointer overflow-hidden rounded-xl shadow-sm transition hover:shadow-md"
+            className="group relative block w-full h-[550px] cursor-pointer overflow-hidden rounded-xl shadow-sm transition hover:shadow-md"
             onClick={() => setIsExpanded(true)}
             aria-label="Expand calendar"
           >
             <iframe
               title="SCIST Calendar"
               src="https://hackmd.io/@SCIST/S6_Course_Info"
-              className="w-full h-full pointer-events-none"
+              className="w-full h-full pointer-events-none transition duration-300 ease-out group-hover:scale-[1.01] group-hover:brightness-75"
               frameBorder="0"
               scrolling="no"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-slate-900/40">
-              <span className="rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-slate-900 shadow">
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/0 transition duration-300 ease-out group-hover:bg-slate-950/35">
+              <span className="rounded-full border border-white/60 bg-white/10 px-5 py-2 text-sm font-semibold text-white opacity-0 shadow-lg backdrop-blur-sm scale-90 transition duration-300 ease-out group-hover:opacity-100 group-hover:scale-100">
                 Click to expand
               </span>
             </div>
